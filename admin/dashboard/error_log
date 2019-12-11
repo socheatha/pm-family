@@ -1,0 +1,10 @@
+[29-Jul-2019 12:50:46 Asia/Bangkok] PHP Warning:  Error while sending QUERY packet. PID=15140 in /home/bsssolution/posila.bsssolution.com/sonthormuk/admin/layout/top_navigation.php on line 3
+[29-Jul-2019 12:50:46 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on bool in /home/bsssolution/posila.bsssolution.com/sonthormuk/admin/layout/top_navigation.php:4
+Stack trace:
+#0 /home/bsssolution/posila.bsssolution.com/sonthormuk/admin/layout/header.php(72): include_once()
+#1 /home/bsssolution/posila.bsssolution.com/sonthormuk/admin/dashboard/index.php(6): include_once('/home/bsssoluti...')
+#2 {main}
+  thrown in /home/bsssolution/posila.bsssolution.com/sonthormuk/admin/layout/top_navigation.php on line 4
+[29-Jul-2019 06:07:42 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home/bsssolution/posila.bsssolution.com/sonthormuk/config/database.php on line 8
+[29-Jul-2019 06:07:45 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home/bsssolution/posila.bsssolution.com/sonthormuk/config/database.php on line 8
+[29-Jul-2019 06:07:48 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home/bsssolution/posila.bsssolution.com/sonthormuk/config/database.php on line 8

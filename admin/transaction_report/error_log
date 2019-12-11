@@ -1,0 +1,3 @@
+[29-Jul-2019 05:48:15 UTC] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/bsssolution/posila.bsssolution.com/sonthormuk/config/database.php on line 8
+[29-Jul-2019 05:48:15 UTC] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/bsssolution/posila.bsssolution.com/sonthormuk/config/database.php on line 8
+[29-Jul-2019 06:07:15 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home/bsssolution/posila.bsssolution.com/sonthormuk/config/database.php on line 8
