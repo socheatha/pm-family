@@ -4,13 +4,13 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "root";
-		$database = "system_fix_phone";
+		$database = "pm_family";
 		$mysqldump = "/usr/bin/mysqldump";
 	}else{
 		$servername = "localhost";
 		$username = "root";
 		$password = "root";
-		$database = "system_fix_phone";
+		$database = "pm_family";
 		$mysqldump = "/Applications/MAMP/Library/bin/mysqldump";
 	}
 

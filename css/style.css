@@ -14,8 +14,8 @@ img.emoji {
 /*Update-color-31-12-18*/
 /*Header-2*/
 
-
-.header-bottom {background: #d0958f!important;}
+#apus-header .apus-topbar,#apus-footer .vc_custom_1522135018928{background: blue!important;}
+.header-bottom, #apus-footer .vc_custom_1509356778902 {background: red!important;}
 
 .postid-5067 .owl-item:last-child, #filter_widget-16_property_title {display: none;}
 /*Property-Tabs*/
@@ -59,7 +59,7 @@ a.cust-backlink {
 /*header_midle*/
 .home .header-v1 .navbar-nav.megamenu > li > a:hover {color: #f5c539 !important;}
 .content {font-size: 15px;}
-.header-bottom {background: #009345;}
+
 /*open_on_google_map*/
 .property-content > .property-section .map-direction {font-family: 'Hanuman', 'Arial';}
 h1,h2,h3,h4,h5,.btn,.widget-filter-form .btn,.subfix{font-family:"Neuron-Bold", "Hanuman", Helvetica, Arial, sans-serif}
@@ -191,7 +191,6 @@ option[value='229'], option[value='262'], option[value='221'], option[value=''] 
 /*Header-1*/
 .home .header-v1 .navbar-nav.megamenu > li > a{color: #fff;}
 .home .header-v1 .navbar-nav.megamenu > li > a:hover {color: #f1cec8 !important;}
-#apus-header .apus-topbar {background: #f1cec8!important;}
 #apus-header .apus-topbar .information p{color: #ffffff!important;}
 #primary-menu.navbar-nav.megamenu > li > a:hover,#primary-menu.navbar-nav.megamenu > li > a:active,#primary-menu.navbar-nav.megamenu > li > a:focus {color: #f1cec8 !important;}
 
@@ -255,11 +254,9 @@ input.wpcf7-form-control.wpcf7-submit.btn.btn-submit {background-color: #d0958f;
 input.wpcf7-form-control.wpcf7-submit.btn.btn-submit:hover {color: #d0958f;border: 1px solid #d0958f;}
 
 /*Footer*/
-#apus-footer .vc_custom_1509356778902 {background-color: #d0958f !important;}
 #apus-footer .vc_sep_line {border-color: #f1cec8!important;}
 span.text-footer-descr:before,span.phone-footer:before,span.email-footer:before{color: #f1cec8!important;}
 .menu li a:hover, .menu li a:active {color: #f1cec8!important;}
-#apus-footer .vc_custom_1522135018928 {background-color: #d0958f !important;}
 
 /*Go-top*/
 #wrapper-container a#back-to-top{background: #f1cec8 !important;}
