@@ -2,8 +2,8 @@
 	$isHosted = false;
 	if($isHosted){
 		$servername = "localhost";
-		$username = "root";
-		$password = "root";
+		$username = "pm_family";
+		$password = "5)P?@cvQp7#F";
 		$database = "pm_family";
 		$mysqldump = "/usr/bin/mysqldump";
 	}else{
@@ -30,5 +30,5 @@
 		@$_SESSION['language']= @$_GET['lang']; 
 		header('location: '.$_SERVER['PHP_SELF']); 
 	}
-	if(@$_SESSION['language'] != ""){ $lang = @$_SESSION['language']; }else{ $lang = 'kh'; }
+	if(@$_SESSION['language'] != ""){ $lang = @$_SESSION['language']; }else{ $lang = 'en'; }
 ?>

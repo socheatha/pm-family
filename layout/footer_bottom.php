@@ -4,8 +4,12 @@
             <div class="wpb_wrapper">
                 <div class="wpb_text_column wpb_content_element " >
                     <div class="wpb_wrapper">
-                        <p style="text-align: center;">© 2018 BOREY PENG HUOTH, All Rights Reserved.</p>
-                        <p style="text-align: center;">FreeLandcer Develop by: <strong>Socheatha Tey</strong> of BSS Solution</p>
+                        <p style="text-align: center;">© <?php echo date('Y') ?> <?= $row_website_config->{'footer_top_'.$lang} ?></p>
+                        <p style="text-align: center;"><?= $row_website_config->{'footer_bottom_'.$lang} ?></p>
+                        <div class="text-center">
+                            <p style="text-align: center;">Count Visited: <br/><img src='https://www.counter12.com/img-6b6AZ1wwZ3DWwd7c-56.gif' alt='counter'></p>
+                            <script type='text/javascript' src='https://www.counter12.com/ad.js?id=6b6AZ1wwZ3DWwd7c'></script>
+                        </div>
                     </div>
                 </div>
             </div>

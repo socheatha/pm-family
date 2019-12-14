@@ -4533,7 +4533,6 @@
   }
   /* line 162, ../sass/template/_widgets-layout.scss */
   .apus-footer .widget-title, .apus-footer .widgettitle, .apus-footer .widget-heading {
-    color: #fff;
     font-size: 25px;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -5681,14 +5680,7 @@
     -o-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
   }
-  /* line 324, ../sass/template/_layout.scss */
-  .header-v1 .navbar-nav.megamenu > li > a {
-    color: #fff;
-  }
   /* line 328, ../sass/template/_layout.scss */
-  .header-v1 .navbar-nav.megamenu > li:hover > a, .header-v1 .navbar-nav.megamenu > li:active > a, .header-v1 .navbar-nav.megamenu > li.active > a, .header-v1 .navbar-nav.megamenu > li.open > a, .header-v1 .navbar-nav.megamenu > li.focus > a {
-    color: #fff;
-  }
   /* line 334, ../sass/template/_layout.scss */
   .header-v1 .login-register ul {
     padding-left: 20px;
@@ -5738,7 +5730,6 @@
   }
   /* line 379, ../sass/template/_layout.scss */
   .header-v2 .navbar-nav.megamenu > li > a {
-    color: #fff;
     padding: 15px 12px;
   }
   /* line 384, ../sass/template/_layout.scss */
@@ -5894,7 +5885,7 @@
   }
   /* line 499, ../sass/template/_layout.scss */
   .header-v6 .navbar-nav.megamenu > li > a {
-    color: #fff;
+
   }
   /* line 503, ../sass/template/_layout.scss */
   .header-v6 .navbar-nav.megamenu > li:hover > a, .header-v6 .navbar-nav.megamenu > li:active > a, .header-v6 .navbar-nav.megamenu > li.active > a, .header-v6 .navbar-nav.megamenu > li.open > a, .header-v6 .navbar-nav.megamenu > li.focus > a {
@@ -6371,7 +6362,6 @@
     padding: 17.5px 12px;
     background: transparent;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    color: #13293d;
     -webkit-transition: all 0.2s ease-in-out 0s;
     -o-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;

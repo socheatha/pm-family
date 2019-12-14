@@ -34,7 +34,9 @@
                     </ul>
                     </li>
                     <li id="menu-item-7158" class="menu-item-7158"><a href="contact_us.php">ទំនាក់ទំនង</a></li>
-                    <li id="menu-item-wpml-ls-317-en" class="menu-item-wpml-ls-317-en"><a href="#"><img class="wpml-ls-flag" src="img/flag/en.png" alt="en" title="English"></a></li>
+                    <li id="menu-item-wpml-ls-317-en" class="menu-item-wpml-ls-317-en">
+                        <a href="<?= $_SERVER['PHP_SELF'] ?>?lang=<?= $lang=='en'?'kh':'en' ?>"><img class="wpml-ls-flag" src="img/flag/<?= $lang=='en'?'kh':'en' ?>.png" alt="en" title="English">
+                    </a></li>
                 </ul>
             </div>        
         </nav>
@@ -45,7 +47,7 @@
     <div class="container">
         <div class="logo pull-left">
             <a href="index.php">
-                <img src="img/img_logo/original_pm_logo.png" alt="Borey Peng Huoth &#8211; Property for Sale in Cambodia">
+                <img src="img/logo/<?= $row_website_config->logo ?>" alt="<?= $row_website_config->{'title_'.$lang} ?>">
             </a>
         </div>
         <div class="pull-right header-mobile-right">

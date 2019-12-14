@@ -29,7 +29,9 @@
                         </ul>
                         </li>
                         <li class="menu-item-7158 aligned-"><a href="contact_us.php">ទំនាក់ទំនង</a></li>
-                        <li class="menu-item-wpml-ls-317-en aligned-"><a href="#"><img class="wpml-ls-flag" src="img/flag/en.png" alt="en" title="English"></a></li>
+                        <li class="menu-item-wpml-ls-317-en aligned-">
+                            <a href="<?= $_SERVER['PHP_SELF'] ?>?lang=<?= $lang=='en'?'kh':'en' ?>"><img class="wpml-ls-flag" src="img/flag/<?= $lang=='en'?'kh':'en' ?>.png" alt="en" title="English"></a>
+                        </li>
                         </ul>
                     </div>                                
                 </nav>

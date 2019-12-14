@@ -1,3 +1,5 @@
+<?php include_once 'config/database.php' ?>
+<?php include_once 'function.php' ?>
 <!DOCTYPE html>
 <html lang="km-KH" class="no-js">
 <head>
@@ -6,7 +8,10 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Hanuman" rel="stylesheet">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>ប្លង់វែបសាយ | Borey Peng Huoth - Property for Sale in Cambodia</title>
+	<title>ប្លង់វែបសាយ | <?= $row_website_config->{'title_'.$lang} ?></title>
+    <meta name="keywords" content="<?= $row_website_config->{'keywords'} ?>">
+    <meta name="description" content="<?= $row_website_config->{'description_'.$lang} ?>">
+    <meta name="author" content="Bss | Socheatha Tey">
     
     <style id='rs-plugin-settings-inline-css' type='text/css'>
         #rs-demo-id {}
@@ -39,6 +44,25 @@
     }</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
     <style>
         @import url('css/style.css');
+        #apus-header .apus-topbar{ background: <?= $row_website_config->{'top_header_bg'} ?> }
+        #apus-header .apus-topbar .information p{ color: <?= $row_website_config->{'top_header_color'} ?>!important; }
+        .apus-header .contact-info-widget{ color: <?= $row_website_config->{'middle_header_color'} ?>!important; }
+        .header-bottom,.navbar-offcanvas-collapse,.apus-offcanvas{background: <?= $row_website_config->{'menu_bg'} ?>!important;  }
+        .navbar-nav.megamenu > li > a,.navbar-offcanvas .navbar-nav > li > a{ color: <?= $row_website_config->{'menu_color'} ?>; }
+        .navbar-nav.megamenu > li:hover > a, .navbar-offcanvas .navbar-nav > li:hover > a{ color: <?= $row_website_config->{'menu_hover'} ?>; }
+        #primary-menu.navbar-nav.megamenu > li > a:hover,#primary-menu.navbar-nav.megamenu > li > a:active,#primary-menu.navbar-nav.megamenu > li > a:focus {color: <?= $row_website_config->{'menu_hover'} ?> !important;}
+    
+        /* footer */
+        .vc_custom_1509356778902{ background-color: <?= $row_website_config->{'footer_top_bg'} ?>; }
+        .apus-footer a,._sct_footer_top{ color: <?= $row_website_config->{'footer_top_color'} ?>; }
+        h2.widgettitle{ color: <?= $row_website_config->{'footer_top_color'} ?>!impotant; }
+        .footer-1 ul li a:hover{ color: <?= $row_website_config->{'footer_top_hover'} ?>!important; }
+        #apus-footer .vc_custom_1522135018928{ background-color: <?= $row_website_config->{'footer_bottom_bg'} ?>; }
+        .apus-footer{ color: <?= $row_website_config->{'footer_top_color'} ?>; }
+
+        /* btt */
+        a#back-to-top{ background-color: <?= $row_website_config->{'btt_bg'} ?>; }
+        a#back-to-top i{ color: <?= $row_website_config->{'btt_color'} ?>; }
     </style>	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>

@@ -21,13 +21,14 @@
                                     <div class="media phone-info pull-left">
                                         <div class="media-left media-middle">
                                             <div class="icon">
-                                                <img src="img/icon/phone_24.png" alt="">
+                                                <img src="img/icon/phone_24.png" alt="<?= $row_website_config->{'title_'.$lang} ?>">
                                             </div>
                                         </div>
                                         <div class="media-body">
                                             <div class="content">
-                                                (+855) 96 2195 196 | 88 2195 196<br>
-                                                pmfamilyrealty.investment@gmail.com
+                                                <?= $row_website_config->{'phone_'.$lang} ?>
+                                                <br>
+                                                <?= $row_website_config->{'email_address'} ?>
                                             </div>
                                         </div>
                                     </div>
@@ -45,7 +46,9 @@
                                         </div>
                                         <div class="media-body">
                                             <div class="content">
-                                                បុរីពិភពថ្មី(កំបូល)​ ផ្លូវលេខ03 ផ្ទះលេខ101&103 <br> សង្កាត់កន្ទោក ខណ្ឌពោធិ៍សែនជ័យ ភ្នំពេញ
+                                                <?= $row_website_config->{'address_line_1_'.$lang} ?>
+                                                <br> 
+                                                <?= $row_website_config->{'address_line_2_'.$lang} ?>
                                             </div>
                                         </div>
                                     </div>
