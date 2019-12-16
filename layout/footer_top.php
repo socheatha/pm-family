@@ -10,14 +10,14 @@
                         <div class="col-xs-12 col-sm-6 col-md-3">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
-                                    <h2 class="widgettitle">ទំព័រផ្សេងៗ</h2>
+                                    <h2 class="widgettitle"><?= $lang_text['f_other_page'][$lang] ?></h2>
                                     <div class="menu-quick-link-kh-container">
                                         <ul id="menu-quick-link-kh" class="menu">
-                                            <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="term_and_condition.php">ល័ក្ខខ័ណ្ឌ</a></li>
-                                            <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4418"><a href="about_us.php">អំពីយើង</a></li>
-                                            <li id="menu-item-4419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4419"><a href="privacy_policy.php">គោលការណ៍​ភាព​ឯកជន</a></li>
-                                            <li id="menu-item-4421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4421"><a href="honor_and_award.php">ពានរង្វាន់</a></li>
-                                            <li id="menu-item-6568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6568"><a href="sitemap.php">ប្លង់វែបសាយ</a></li>
+                                            <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="term_and_condition.php"><?= $lang_text['l_term'][$lang] ?></a></li>
+                                            <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4418"><a href="about_us.php"><?= $lang_text['l_about'][$lang] ?></a></li>
+                                            <li id="menu-item-4419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4419"><a href="privacy_policy.php"><?= $lang_text['l_privacy'][$lang] ?></a></li>
+                                            <li id="menu-item-4421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4421"><a href="honor_and_award.php"><?= $lang_text['l_honor'][$lang] ?></a></li>
+                                            <li id="menu-item-6568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6568"><a href="sitemap.php"><?= $lang_text['l_sitemap'][$lang] ?></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -27,28 +27,28 @@
                         <div class="col-xs-12 col-sm-6 col-md-3">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
-                                    <h2 class="widgettitle">គម្រោង</h2>
+                                    <h2 class="widgettitle"><?= $lang_text['f_project'][$lang] ?></h2>
                                     <div class="menu-quick-link-kh-container">
                                         <ul id="menu-quick-link-kh" class="menu">
-                                            <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="project_current.php">គម្រោងក្នុងពេលបច្ចុប្បន្ន</a></li>
-                                            <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4418"><a href="project_future.php">គម្រោងនាពេលអនាគត</a></li>
-                                            <li id="menu-item-4419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4419"><a href="project_existing.php">គម្រោងដែលបញ្ចប់ការសាងសង់</a></li>
+                                            <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="project_current.php"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
+                                            <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4418"><a href="project_future.php"><?= $lang_text['l_future_pro'][$lang] ?></a></li>
+                                            <li id="menu-item-4419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4419"><a href="project_existing.php"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <br><br>
-                        </div>
+                        </div> 
                         <div class="col-xs-12 col-sm-6 col-md-3">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
-                                    <h2 class="widgettitle">បណ្ដាញសង្គម</h2>
+                                    <h2 class="widgettitle"><?= $lang_text['f_social'][$lang] ?></h2>
                                     <div class="wpb_text_column wpb_content_element  icon-footer" >
                                         <div class="wpb_wrapper">
                                             <div class="social-group" style="text-align: left; width: 200px;">
                                                 <p>
-                                                    <a class="social-media" href="https://web.facebook.com/pmfamilyrealtyandinvestment/" target="_blank" rel="noopener noreferrer"><img class="alignnone" style="width: 35px; margin-right: 8px; margin-bottom: 10px;" src="img/social/fbiconph-icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" width="40" height="40" /></a>
-                                                    <a class="social-media" href="https://www.youtube.com/channel/UCQ28cp5FBnMIPyRHmD9MwDA" target="_blank" rel="noopener noreferrer"><img class="alignnone" style="width: 35px; margin-right: 8px; margin-bottom: 10px; " src="img/social/youtubeiconph_icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" /></a>
+                                                    <a class="social-media" href="<?= $social['fb'] ?>" target="_blank" rel="noopener noreferrer"><img class="alignnone" style="width: 35px; margin-right: 8px; margin-bottom: 10px;" src="img/social/fbiconph-icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" width="40" height="40" /></a>
+                                                    <a class="social-media" href="<?= $social['u_tube'] ?>" target="_blank" rel="noopener noreferrer"><img class="alignnone" style="width: 35px; margin-right: 8px; margin-bottom: 10px; " src="img/social/youtubeiconph_icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" /></a>
                                                     <!-- <a class="social-media" href="#" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px;" src="img/social/gplusiconph_icon.png" alt="P.M Family Reality & Invesment" /></a> -->
                                                     <!-- <a class="social-media" href="#" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px;" src="img/social/instagramiconph_icon.png" alt="P.M Family Reality & Invesment" /></a> -->
                                                 </p>
@@ -78,7 +78,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-3">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
-                                    <h2 class="widgettitle">ទំព័រផ្សេងៗ</h2>
+                                    <h2 class="widgettitle"><?= $lang_text['f_contact'][$lang] ?></h2>
                                 </div>
                             </div>
                             <div class="apus_custom_menu wpb_content_element _sct_footer_top">
@@ -92,7 +92,7 @@
                                                 <?= $row_website_config->{'address_line_2_'.$lang} ?>
                                             </span></p>
                                             <p><span class="phone-footer" style="font-size: 15px;"> <?= $row_website_config->{'phone_'.$lang} ?></span></p>
-                                            <p><span class="email-footer" style="font-size: 15px;">  <?= $row_website_config->{'email_address'} ?></span></p>
+                                            <p><span class="email-footer" style="font-size: 15px;"> <?= $lang_text['l_email'][$lang] ?>: <?= $row_website_config->{'email_address'} ?></span></p>
                                         </div>
                                     </div>
                                 </div>

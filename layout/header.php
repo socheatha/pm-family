@@ -1,4 +1,5 @@
 <?php include_once 'config/database.php' ?>
+<?php include_once 'language/index.php' ?>
 <?php include_once 'function.php' ?>
 <!DOCTYPE html>
 <html lang="km-KH" class="no-js">

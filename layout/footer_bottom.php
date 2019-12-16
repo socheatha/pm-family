@@ -7,7 +7,7 @@
                         <p style="text-align: center;">© <?php echo date('Y') ?> <?= $row_website_config->{'footer_top_'.$lang} ?></p>
                         <p style="text-align: center;"><?= $row_website_config->{'footer_bottom_'.$lang} ?></p>
                         <div class="text-center">
-                            <p style="text-align: center;">Count Visited: <br/><img src='https://www.counter12.com/img-6b6AZ1wwZ3DWwd7c-56.gif' alt='counter'></p>
+                            <p style="text-align: center;"><?= $lang_text['countVisited'][$lang] ?>: <br/><img src='https://www.counter12.com/img-6b6AZ1wwZ3DWwd7c-56.gif' alt='counter'></p>
                             <script type='text/javascript' src='https://www.counter12.com/ad.js?id=6b6AZ1wwZ3DWwd7c'></script>
                         </div>
                     </div>

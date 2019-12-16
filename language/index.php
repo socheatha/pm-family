@@ -168,8 +168,34 @@
  	$lang_text['oldMachine'] = ['en'=>'Old Machine' ,				'kh'=>'ម៉ាស៊ីនធ្លាប់ជួសជុល',				'cn'=>'最新消息'];
  	
 
+	//footer
+	$lang_text['f_other_page'] = ['en'=>'Quick Link' ,				'kh'=>'ទំព័រផ្សេងៗ',				'cn'=>'最新消息'];
+	$lang_text['f_project'] = ['en'=>'Our Project' ,				'kh'=>'គម្រោង',				'cn'=>'最新消息'];
+	$lang_text['f_social'] = ['en'=>'Our Social Media' ,				'kh'=>'បណ្តាញសង្គម',				'cn'=>'最新消息'];
+	$lang_text['f_contact'] = ['en'=>'Contact Us' ,				'kh'=>'ទំនាក់ទំនង',				'cn'=>'最新消息'];
+	$lang_text['countVisited'] = ['en'=>'Count Visited' ,				'kh'=>'ចំនួនអ្នកចូលមើល',				'cn'=>'最新消息'];
 
+	//link
+	$lang_text['l_term'] = ['en'=>'Terms of Use' ,				'kh'=>'ល័ក្ខខ័ណ្ឌ',				'cn'=>'最新消息'];
+	$lang_text['l_about'] = ['en'=>'About us' ,				'kh'=>'អំពីយើង',				'cn'=>'最新消息'];
+	$lang_text['l_privacy'] = ['en'=>'Privacy Policy' ,				'kh'=>'គោលការណ៍​ភាព​ឯកជន',				'cn'=>'最新消息'];
+	$lang_text['l_honor'] = ['en'=>'Honor and Awards' ,				'kh'=>'ពានរង្វាន់',				'cn'=>'最新消息'];
+	$lang_text['l_sitemap'] = ['en'=>'Sitemap' ,				'kh'=>'ប្លង់វែបសាយ',				'cn'=>'最新消息'];
+	$lang_text['l_current_pro'] = ['en'=>'Current Projects' ,				'kh'=>'គម្រោងក្នុងពេលបច្ចុប្បន្ន',				'cn'=>'最新消息'];
+	$lang_text['l_future_pro'] = ['en'=>'Future Project' ,				'kh'=>'គម្រោងនាពេលអនាគត',				'cn'=>'最新消息'];
+	$lang_text['l_exist_pro'] = ['en'=>'Existing Projects' ,				'kh'=>'គម្រោងដែលបញ្ចប់ការសាងសង់',				'cn'=>'最新消息'];
+	$lang_text['l_email'] = ['en'=>'Email' ,				'kh'=>'អ៊ីមែល',				'cn'=>''];
 
-
-
+	//menu
+	$lang_text['m_home'] = ['en'=>'HOME' ,				'kh'=>'ទំព័រដើម',				'cn'=>''];
+	$lang_text['m_about'] = ['en'=>'ABOUT US' ,				'kh'=>'អំពីក្រុមហ៊ុន',				'cn'=>''];
+	$lang_text['m_project'] = ['en'=>'PROJECTS' ,				'kh'=>'គម្រោង',				'cn'=>''];
+	$lang_text['m_news'] = ['en'=>'NEWS' ,				'kh'=>'ព័ត៌មានទូទៅ',				'cn'=>''];
+	$lang_text['m_promotion'] = ['en'=>'Promotions' ,				'kh'=>'ព័ត៌មានប្រូម៉ូសិន',				'cn'=>''];
+	$lang_text['m_contact'] = ['en'=>'CONTACT' ,				'kh'=>'ទំនាក់ទំនង',				'cn'=>''];
+	$lang_text['m_wwa'] = ['en'=>'Who We Are' ,				'kh'=>'សារពីអគ្គនាយក',				'cn'=>''];
+	$lang_text['m_csr'] = ['en'=>'Corporate Social Responsibility' ,				'kh'=>'ការរួមចំណែកនៅក្នុងសង្គម',				'cn'=>''];
+	$lang_text['m_activity'] = ['en'=>'Activity' ,				'kh'=>'សកម្មភាពនានា',				'cn'=>''];
+	$lang_text['m_honor'] = ['en'=>'Honor and Award' ,				'kh'=>'ប័ណ្ណកិត្តិយស និង ពានរង្វាន់',				'cn'=>''];
+	$lang_text['m_certificate'] = ['en'=>'Certificate' ,				'kh'=>'លិខិតថ្លែងអំណរគុណ',				'cn'=>''];
  ?>

@@ -10,8 +10,7 @@
     <li class="btn-group"><a href="../supplier/" class="btn red-haze btn-sm <?= (@$menu_active==4)?("active"):("") ?>"><?= $lang_text['supplier'][$lang] ?></a></li> -->
     <li class="btn-group"><a href="../supplier/" class="btn red-haze btn-sm <?= (@$menu_active==4)?("active"):("") ?>">About Us</a></li>
     <li class="btn-group"><a href="../supplier/" class="btn red-haze btn-sm <?= (@$menu_active==4)?("active"):("") ?>">Projects</a></li>
-    <li class="btn-group"><a href="../supplier/" class="btn red-haze btn-sm <?= (@$menu_active==4)?("active"):("") ?>">News</a></li>
-    <li class="btn-group"><a href="../supplier/" class="btn red-haze btn-sm <?= (@$menu_active==4)?("active"):("") ?>">Contact</a></li>
+    <li class="btn-group"><a href="../news_and_promotion/" class="btn red-haze btn-sm <?= (@$menu_active==40)?("active"):("") ?>">News & Promotion</a></li>
     <?php if (@$_SESSION['user']->position_id == 1): ?>
     <!-- <li class="btn-group"><a href="../employee/" class="btn red-haze btn-sm <?= (@$menu_active==8)?("active"):("") ?>"><?= $lang_text['employee'][$lang] ?></a></li>  -->
     <li class="btn-group"><a href="../setting/" class="btn red-haze btn-sm <?= (@$menu_active==10)?("active"):("") ?>"><?= $lang_text['setting'][$lang] ?></a></li>
