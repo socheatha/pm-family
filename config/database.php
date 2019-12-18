@@ -30,5 +30,5 @@
 		@$_SESSION['language']= @$_GET['lang']; 
 		header('location: '.$_SERVER['PHP_SELF']); 
 	}
-	if(@$_SESSION['language'] != ""){ $lang = @$_SESSION['language']; }else{ $lang = 'en'; }
+	if(@$_SESSION['language'] != ""){ $lang = @$_SESSION['language']; }else{ $lang = 'kh'; }
 ?>

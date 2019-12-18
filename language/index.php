@@ -198,4 +198,8 @@
 	$lang_text['m_activity'] = ['en'=>'Activity' ,				'kh'=>'សកម្មភាពនានា',				'cn'=>''];
 	$lang_text['m_honor'] = ['en'=>'Honor and Award' ,				'kh'=>'ប័ណ្ណកិត្តិយស និង ពានរង្វាន់',				'cn'=>''];
 	$lang_text['m_certificate'] = ['en'=>'Certificate' ,				'kh'=>'លិខិតថ្លែងអំណរគុណ',				'cn'=>''];
+	
+	
+	$lang_text['o_recent_news'] = ['en'=>'RECENT NEWS' ,				'kh'=>'ព័ត៌មានថ្មីចុងក្រោយ',				'cn'=>''];
+	$lang_text['o_news_by_year'] = ['en'=>'NEWS BY YEAR' ,				'kh'=>'បង្ហាញពត៌មានតាមឆ្នាំ',				'cn'=>''];
  ?>
