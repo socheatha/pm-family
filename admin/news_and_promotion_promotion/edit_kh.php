@@ -94,7 +94,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                                 <div class="form-group">
-                                    <label>Title En<span class="required" aria-required="true">*</span></label>
+                                    <label>Title Kh<span class="required" aria-required="true">*</span></label>
                                     <input type="text" class="form-control" name="txt_title" placeholder="Enter title" required="required" autocomplete="off" value="<?= @$row_old_slider->title_kh ?>">
                                 </div>
                                 <div class="form-group">
@@ -104,14 +104,14 @@
                             </div>
                             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                                 <div class="form-group">
-                                    <label>Short Description En<span class="required" aria-required="true">*</span></label>
+                                    <label>Short Description Kh<span class="required" aria-required="true">*</span></label>
                                     <textarea rows="5" class="form-control" name="txt_description" placeholder="Enter short description" required="required" autocomplete="off"><?= @$row_old_slider->short_description_kh ?></textarea>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <br>
                                 <div class="form-group">
-                                    <label>Detail En<span class="required" aria-required="true">*</span></label>
+                                    <label>Detail Kh<span class="required" aria-required="true">*</span></label>
                                     <textarea class="form-control detail" id="detail" name="txt_detail" placeholder="Repeat your password" required="required" autocomplete="off"><?= @$row_old_slider->detail_kh ?></textarea>
                                 </div>
                             </div>

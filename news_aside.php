@@ -4,6 +4,9 @@
         <ul>
             <?php
                 $years = '';
+                if($type==1){ $page = 'news.php'; $page_detail = 'news_detail.php'; }
+                if($type==2){ $page = 'hot_sale.php'; $page_detail = 'hot_sale_detail.php'; }
+                if($type==3){ $page =  'activity.php'; $page_detail = 'activity_detail.php'; }
                 $get_data = $connect->query("SELECT A.*,B.username as name, 
                     (SELECT 
                         GROUP_CONCAT(DISTINCT DATE_FORMAT(tbl_news.date, '%Y')) 
@@ -17,7 +20,7 @@
                 while ($row = mysqli_fetch_object($get_data)) {
                     $years = $row->years;
                     echo '<li>
-                        <a href="'.($type==1?'news_detail.php':'hot_sale_detail.php').'?id='.$row->id.'" class="custom_side_news">'.$row->{'title_'.$lang}.'</a>
+                        <a href="'.$page_detail.'?id='.$row->id.'" class="custom_side_news">'.$row->{'title_'.$lang}.'</a>
                     </li>';
                 }
             ?>
@@ -30,7 +33,7 @@
                 $years = explode(',',$years);
                 sort($years);
                 foreach($years as $year){
-                    echo '<a href="'.($type==1?'news.php':'hot_sale.php').'?year='.$year.'" class="'.(@$_GET['year']==$year?'active':'').' tag-cloud-link tag-link-101 tag-link-position-1" style="font-size: 8pt;" aria-label="2017 (11 items)">'.$year.'</a>';
+                    echo '<a href="'.$page.'?year='.$year.'" class="'.(@$_GET['year']==$year?'active':'').' tag-cloud-link tag-link-101 tag-link-position-1" style="font-size: 8pt;" aria-label="2017 (11 items)">'.$year.'</a>';
                 }
             ?>
         </div>

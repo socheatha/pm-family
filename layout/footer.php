@@ -34,6 +34,7 @@
         <!-- <script type='text/javascript' src='https://boreypenghuoth.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.11.4'></script> -->
         <script type='text/javascript' src='js/function.js'></script>
 
+        <!-- <script type='text/javascript' src='https://boreypenghuoth.com/wp-content/plugins/tlp-portfolio/assets/js/tlpportfolio.js'></script> -->
         <!-- <script type='text/javascript' src='https://boreypenghuoth.com/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script> -->
         <script type='text/javascript' src='js/js_composer_front.min.js'></script>
         <!-- <script type='text/javascript' src='https://boreypenghuoth.com/wp-content/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min.js?ver=5.2.1'></script> -->

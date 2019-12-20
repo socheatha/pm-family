@@ -17,9 +17,9 @@
     <style id='rs-plugin-settings-inline-css' type='text/css'>
         #rs-demo-id {}
     </style>
-    <!-- <link rel='stylesheet' id='tlpportfolio-css-css'  href='https://boreypenghuoth.com/wp-content/plugins/tlp-portfolio/assets/css/tlpportfolio.css?ver=5.2.4' type='text/css' media='all' /> -->
+    <link rel='stylesheet' id='tlpportfolio-css-css'  href='css/tlpportfolio.css' type='text/css' media='all' />
     <!-- <link rel='stylesheet' id='wpml-menu-item-0-css'  href='//boreypenghuoth.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.css?ver=1' type='text/css' media='all' /> -->
-    <!-- <link rel='stylesheet' id='homesweet-theme-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Dosis:300,400,500,600,700,800&#038;subset=latin%2Clatin-ext' type='text/css' media='all' /> -->
+    <link rel='stylesheet' id='homesweet-theme-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Dosis:300,400,500,600,700,800&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_front-css'  href='css/js_composer_front_custom.css' type='text/css' media='all' />
     <link rel='stylesheet' id='awesome-css'  href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
     <!-- <link rel='stylesheet' id='font-ionicons-css'  href='https://boreypenghuoth.com/wp-content/themes/gfproperty/css/ionicons.css?ver=v2.0.0' type='text/css' media='all' /> -->

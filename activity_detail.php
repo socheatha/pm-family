@@ -7,7 +7,7 @@
 					<?php 
                         $id = @$_GET['id'];
                         if(!$id){ 
-                            header('location: news.php'); 
+                            header('location: activity.php'); 
                         }
                         $get_data = $connect->query("SELECT A.*,B.username as name
                             FROM tbl_news as A

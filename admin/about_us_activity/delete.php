@@ -10,7 +10,13 @@
 <?php 
 	if(@$_GET['del_id'] != ""){
 		$del_id = @$_GET['del_id'];
-		$connect->query("DELETE FROM tbl_about_us WHERE id='$del_id'");
+		$connect->query("DELETE FROM tbl_news WHERE id='$del_id'");
+	}
+	if(@$_GET['del_img'] != ""){
+		$del_img = @$_GET['del_img'];
+		if(file_exists("../../img/news/".$del_img)){
+			unlink("../../img/news/".$del_img);
+		}
 	}
 ?>
 <script type="text/javascript">
