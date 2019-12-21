@@ -6,51 +6,70 @@
     include_once '../layout/header.php';
 ?>
 
+
 <?php 
+
     if(isset($_POST["btn_add"])){
         $v_title = $connect->real_escape_string(@$_POST["txt_title"]);
         $v_date = $connect->real_escape_string(@$_POST["txt_date"]);
-        $v_index = $connect->real_escape_string(@$_POST["txt_index"]);
         $v_description = $connect->real_escape_string(@$_POST["txt_description"]);
-        $v_detail = $connect->real_escape_string(@$_POST["txt_detail"]);
+        $v_index = $connect->real_escape_string(@$_POST["txt_index"]);
+        $v_detail = '';
 
         $v_current_user = @$_SESSION['user']->id;
         $v_current_time_stamp = date('Y-m-d H:i:s');
         
-        $sql = "INSERT INTO tbl_about_us (
-                `date`,
-                `title_en`,
-                `title_kh`,
-                `index`,
-                `type`,
-                `short_description_en`,
-                `short_description_kh`,
-                `detail_en`,
-                `detail_kh`,
-                `created_by`,
-                `created_at`
-            ) 
-            VALUES (
-                '$v_date',
-                '$v_title',
-                '$v_title',
-                '$v_index',
-                '1',
-                '$v_description',
-                '$v_description',
-                '$v_detail',
-                '$v_detail',
-                '$v_current_user',
-                '$v_current_time_stamp'
-            )
-        ";
-        $result = mysqli_query($connect, $sql);
-        if ($result) { 
-            echo '<script> window.location.replace("index.php");</script>'; 
-        }else{ 
+        if(!empty($_FILES['txt_profile']['size'])){
+            $image = date('Y_m_d')."_".rand(1111,9999).".png";
+            if(move_uploaded_file($_FILES['txt_profile']['tmp_name'],"../../img/certificate/$image")){
+                $sql = "INSERT INTO tbl_certificates (
+                        date,
+                        type,
+                        title_en,
+                        title_kh,
+                        profile,
+                        `index`,
+                        short_description_en,
+                        short_description_kh,
+                        detail_en,
+                        detail_kh,
+                        created_by,
+                        created_at
+                    ) 
+                    VALUES (
+                        '$v_date',
+                        '1',
+                        '$v_title',
+                        '$v_title',
+                        '$image',
+                        '$v_index',
+                        '$v_description',
+                        '$v_description',
+                        '$v_detail',
+                        '$v_detail',
+                        '$v_current_user',
+                        '$v_current_time_stamp'
+                    )
+                ";
+                $result = mysqli_query($connect, $sql);
+                if ($result) { 
+                    echo '<script> window.location.replace("index.php");</script>'; 
+                }else{ 
+                    $sms = '<div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Error!</strong> Query Error '.mysqli_error($connect).' ...
+                    </div>';  
+                }
+            }else{
+                $sms = '<div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Error!</strong> Process error when uploading profile image ...
+                </div>';  
+            }
+        }else{
             $sms = '<div class="alert alert-danger">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Error!</strong> '.$sql.' ===> '.mysqli_error($connect).' ...
+                <strong>Error!</strong> Please choose profile image to coninue ...
             </div>';  
         }
     }
@@ -92,13 +111,19 @@
                                     <input class="form-control" required name="txt_title" type="text" placeholder="Title">     
                                 </div>
                                 <div class="row">
-                                    <div class="col-xs-6">
+                                    <div class="col-xs-4">
                                         <div class="form-group">
                                             <label for ="">Date <span class="required" aria-required="true">*</span></label>                                          
                                             <input class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" required name="txt_date" type="text" placeholder="Date" value="<?= date('Y-m-d') ?>">          
                                         </div>
                                     </div>
-                                    <div class="col-xs-6">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label for ="">Profile <span class="required" aria-required="true">*</span></label>                                          
+                                            <input class="form-control" required name="txt_profile" type="file" placeholder="Profile">          
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
                                         <div class="form-group">
                                             <label for ="">Index <span class="required" aria-required="true">*</span></label>                                          
                                             <input class="form-control" required name="txt_index" type="text" placeholder="Index">          
@@ -114,10 +139,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for ="">Detail <span class="required" aria-required="true">*</span>:</label>                                          
-                            <textarea class="form-control" name="txt_detail" id="detail" rows="5" required></textarea>
-                        </div>
                     </div>
                     <div class="form-actions">
                         <div class="row">
@@ -132,13 +153,4 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="../../plugin/ckeditor_4.7.0_full/ckeditor/ckeditor.js"></script>
-<script type="text/javascript">
-    CKEDITOR.replace( 'detail', {
-        language: 'en',
-      height: '700'
-        // uiColor: '#9AB8F3'
-    });
-</script>
 <?php include_once '../layout/footer.php' ?>

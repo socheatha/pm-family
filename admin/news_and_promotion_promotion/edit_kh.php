@@ -12,6 +12,7 @@
         $v_image = @$_FILES['txt_profile'];
         $v_id = @$_POST['txt_id'];
         $v_title = @$connect->real_escape_string($_POST['txt_title']); 
+        $v_date = @$connect->real_escape_string($_POST['txt_date']); 
         $v_description = @$connect->real_escape_string($_POST['txt_description']); 
         $v_detail = @$connect->real_escape_string($_POST['txt_detail']); 
         if($v_image["name"] != ""){
@@ -25,6 +26,7 @@
 
             $query_update = "UPDATE tbl_news SET
                     title_kh='$v_title',
+                    `date`='$v_date',
                     profile='$new_name',
                     short_description_kh='$v_description',
                     detail_kh='$v_detail' WHERE id='$v_id'";
@@ -32,6 +34,7 @@
         }else{
             $query_update = "UPDATE tbl_news SET
                     title_kh='$v_title',
+                    `date`='$v_date',
                     short_description_kh='$v_description',
                     detail_kh='$v_detail' WHERE id='$v_id'";
         }
@@ -97,9 +100,19 @@
                                     <label>Title Kh<span class="required" aria-required="true">*</span></label>
                                     <input type="text" class="form-control" name="txt_title" placeholder="Enter title" required="required" autocomplete="off" value="<?= @$row_old_slider->title_kh ?>">
                                 </div>
-                                <div class="form-group">
-                                    <label>Profile <span class="required" aria-required="true">*</span> </label>
-                                    <input type="file" class="form-control" name="txt_profile" placeholder="Choose profile image" autocomplete="off">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Date <span class="required" aria-required="true">*</span></label>                                          
+                                            <input class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" required name="txt_date" type="text" placeholder="Date" value="<?= @$row_old_slider->date ?>">          
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label>Profile <span class="required" aria-required="true">*</span> </label>
+                                            <input type="file" class="form-control" name="txt_profile" placeholder="Choose profile image" autocomplete="off">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">

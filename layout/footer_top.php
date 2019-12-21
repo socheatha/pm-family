@@ -13,7 +13,7 @@
                                     <h2 class="widgettitle"><?= $lang_text['f_other_page'][$lang] ?></h2>
                                     <div class="menu-quick-link-kh-container">
                                         <ul id="menu-quick-link-kh" class="menu">
-                                            <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="term_and_condition.php"><?= $lang_text['l_term'][$lang] ?></a></li>
+                                            <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="privacy_policy.php"><?= $lang_text['l_term'][$lang] ?></a></li>
                                             <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4418"><a href="about_us.php"><?= $lang_text['l_about'][$lang] ?></a></li>
                                             <li id="menu-item-4419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4419"><a href="privacy_policy.php"><?= $lang_text['l_privacy'][$lang] ?></a></li>
                                             <li id="menu-item-4421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4421"><a href="honor_and_award.php"><?= $lang_text['l_honor'][$lang] ?></a></li>

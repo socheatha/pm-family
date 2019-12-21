@@ -10,6 +10,7 @@
 							$get_data = $connect->query("SELECT A.*,B.username as name
 								FROM tbl_about_us as A
 								LEFT JOIN tbl_pos_user AS B ON B.id=A.created_by
+								WHERE type='1'
 								ORDER BY A.index ASC");
 							while ($row = mysqli_fetch_object($get_data)) {
 								echo '<h1 class="title_sub">'.$row->{'title_'.$lang}.'</h1>';

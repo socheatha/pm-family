@@ -144,6 +144,7 @@
  	$lang_text['fixByEmployee'] = ['en'=>'Fix by Employee' ,				'kh'=>'ជួសជុលដោយ',				'cn'=>'最新消息'];
  	
  	$lang_text['all'] = ['en'=>'All' ,				'kh'=>'ទាំងអស់',				'cn'=>'最新消息'];
+ 	$lang_text['show_all'] = ['en'=>'Show All' ,				'kh'=>'ទាំងអស់',				'cn'=>'最新消息'];
  	$lang_text['pending'] = ['en'=>'Pending' ,				'kh'=>'មិនទាន់ជួសជុល',				'cn'=>'最新消息'];
  	$lang_text['doing'] = ['en'=>'Doing' ,				'kh'=>'កំពុងជួសជុល',				'cn'=>'最新消息'];
  	$lang_text['finished'] = ['en'=>'Finished' ,				'kh'=>'ជួសជុលរួច',				'cn'=>'最新消息'];
@@ -202,4 +203,8 @@
 	
 	$lang_text['o_recent_news'] = ['en'=>'RECENT NEWS' ,				'kh'=>'ព័ត៌មានថ្មីចុងក្រោយ',				'cn'=>''];
 	$lang_text['o_news_by_year'] = ['en'=>'NEWS BY YEAR' ,				'kh'=>'បង្ហាញពត៌មានតាមឆ្នាំ',				'cn'=>''];
+	
+	$lang_text['terms_of_use'] = ['en'=>'Terms of Use' ,				'kh'=>'គោលការណ៍ ភាព ឯកជន',				'cn'=>''];
+
+	$lang_text['sm_site_map'] = ['en'=>'SITEMAP' ,				'kh'=>'ប្លង់វែបសាយ',				'cn'=>''];
  ?>

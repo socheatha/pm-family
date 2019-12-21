@@ -52,13 +52,13 @@
 		</div>
 	</div>
 	<style>
+		.entry-title a, .recentTitle h5, .entry-title{
+            color: #444!important;
+			font-family: "Neuron-Bold", serif!important;
+            font-weight: bold!important;
+		} 
 		.info-content{
 			margin-top: 15px;
-		}
-		.entry-title a, .recentTitle h5{
-			text-decoration: none;
-			color: #444;
-			font-family: "Neuron", serif!important;
 		}
 		.post_readmore a{
 			text-decoration: none;

@@ -28,6 +28,12 @@
                     <span class="title">3.Honor and Award</span>
                 </a>
             </li>
+            <li class="nav-item  ">
+                <a href="../about_us_privacy_policy/" class="nav-link nav-toggle">
+                    <i class="icon-diamond"></i>
+                    <span class="title">4.Privacy Policy</span>
+                </a>
+            </li>
         </ul>
         <!-- END SIDEBAR MENU -->
     </div>

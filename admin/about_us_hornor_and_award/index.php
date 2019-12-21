@@ -8,7 +8,7 @@
 <div class="portlet light bordered">
     <div class="row">
         <div class="col-xs-12">
-            <h2><i class="fa fa-cubes fa-fw"></i> About Us Administrator</h2>
+            <h2><i class="fa fa-cubes fa-fw"></i> Honor and Award Administrator</h2>
         </div>
     </div>
     <br>
@@ -28,9 +28,9 @@
                     <tr>
                         <th>N&deg;</th>
                         <th>Info</th>
+                        <th class="text-center">Profile</th>
                         <th class="text-center">Index</th>
                         <th>Title</th>
-                        <!-- <th>Short Description</th> -->
                         <th class="text-center"><?= $lang_text['action'][$lang] ?> <i class="fa fa-cog" aria-hidden="true"></i></th>
                     </tr>
                 </thead>
@@ -38,10 +38,9 @@
                     <?php 
                         $i = 0;
                         $get_data = $connect->query("SELECT A.*,B.username as name
-                            FROM tbl_about_us as A
+                            FROM tbl_certificates as A
                             LEFT JOIN tbl_pos_user AS B ON B.id=A.created_by
-                            WHERE A.type='1'
-                            ORDER BY A.index ASC");
+                            WHERE A.type='2' ORDER BY A.index ASC");
                         while ($row = mysqli_fetch_object($get_data)) {
                             echo '<tr>';
                                 echo '<td>'.(++$i).'</td>';
@@ -49,7 +48,10 @@
                                     <i class="fa fa-calendar fa-fw"></i> '.$row->date.'<br>
                                     <i class="fa fa-user fa-fw"></i> '.$row->name.'
                                 </td>';
-                                echo '<td class="text-center">'.$row->index.'</td>';
+                                echo '<td class="text-center">
+                                    <a href="../../img/certificate/'.$row->profile.'" target="_blank"><img src="../../img/certificate/'.$row->profile.'" height="50px"/></a>
+                                </td>';
+                                echo '<td class="text-center">'.$row->index.' </td>';
                                 echo '<td>
                                     <img src="../../img/flag/en.png"/>:'.$row->title_en.'<br>
                                     <img src="../../img/flag/kh.png"/>:'.$row->title_kh.'
@@ -61,7 +63,7 @@
                                 echo '<td class="text-center">
                                     <a href="edit.php?edit_id='.$row->id.'" class="btn btn-xs btn-warning" title="edit"><img src="../../img/flag/en.png"/> <i class="fa fa-edit"></i></a>
                                     <a href="edit_kh.php?edit_id='.$row->id.'" class="btn btn-xs btn-warning" title="edit"><img src="../../img/flag/kh.png"/> <i class="fa fa-edit"></i></a>
-                                    <a href="delete.php?del_id='.$row->id.'" onclick="return confirm(\'Are you sure to delete this?\')" class="btn btn-xs btn-danger" title="delete"><i class="fa fa-trash"></i></a>
+                                    <a href="delete.php?del_id='.$row->id.'&del_img='.$row->profile.'" onclick="return confirm(\'Are you sure to delete this?\')" class="btn btn-xs btn-danger" title="delete"><i class="fa fa-trash"></i></a>
                                     </td>';
                             echo '</tr>';
                         }

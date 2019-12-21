@@ -758,5 +758,5 @@ h3.available-in {
 
 /*preloading*/
 .apus-page-loading {
-    background: url(/wp-content/uploads/2018/07/loading-2.gif) no-repeat scroll center center/80px auto white;
+    background: url('../img/tools/loading-2.gif') no-repeat scroll center center/80px auto white;
 }

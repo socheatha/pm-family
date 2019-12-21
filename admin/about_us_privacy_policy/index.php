@@ -8,7 +8,7 @@
 <div class="portlet light bordered">
     <div class="row">
         <div class="col-xs-12">
-            <h2><i class="fa fa-cubes fa-fw"></i> About Us Administrator</h2>
+            <h2><i class="fa fa-cubes fa-fw"></i> Privacy Policy Administrator</h2>
         </div>
     </div>
     <br>
@@ -40,7 +40,7 @@
                         $get_data = $connect->query("SELECT A.*,B.username as name
                             FROM tbl_about_us as A
                             LEFT JOIN tbl_pos_user AS B ON B.id=A.created_by
-                            WHERE A.type='1'
+                            WHERE A.type='2'
                             ORDER BY A.index ASC");
                         while ($row = mysqli_fetch_object($get_data)) {
                             echo '<tr>';
