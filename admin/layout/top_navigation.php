@@ -12,7 +12,7 @@
     <li class="btn-group"><a href="../stock_sell/" class="btn red-haze btn-sm <?= (@$menu_active==3)?("active"):("") ?>"><?= $lang_text['stock'][$lang] ?></a></li>
     <li class="btn-group"><a href="../supplier/" class="btn red-haze btn-sm <?= (@$menu_active==4)?("active"):("") ?>"><?= $lang_text['supplier'][$lang] ?></a></li> -->
     <li class="btn-group"><a href="../about_us/" class="btn red-haze btn-sm <?= (@$menu_active==44)?("active"):("") ?>">About Us</a></li>
-    <li class="btn-group"><a href="../supplier/" class="btn red-haze btn-sm <?= (@$menu_active==4)?("active"):("") ?>">Projects</a></li>
+    <li class="btn-group"><a href="../project/" class="btn red-haze btn-sm <?= (@$menu_active==49)?("active"):("") ?>">Projects</a></li>
     <li class="btn-group"><a href="../news_and_promotion/" class="btn red-haze btn-sm <?= (@$menu_active==40)?("active"):("") ?>">News & Promotion</a></li>
     <?php if (@$_SESSION['user']->position_id == 1): ?>
     <!-- <li class="btn-group"><a href="../employee/" class="btn red-haze btn-sm <?= (@$menu_active==8)?("active"):("") ?>"><?= $lang_text['employee'][$lang] ?></a></li>  -->
