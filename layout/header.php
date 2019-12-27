@@ -64,6 +64,10 @@
         /* btt */
         a#back-to-top{ background-color: <?= $row_website_config->{'btt_bg'} ?>; }
         a#back-to-top i{ color: <?= $row_website_config->{'btt_color'} ?>; }
+
+        a{
+            text-decoration: none!important;
+        }
     </style>	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>

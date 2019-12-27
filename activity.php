@@ -34,7 +34,7 @@
 											</div>
 											<div class="description">'.$row->{'short_description_'.$lang}.'</div>
 											<div class="post_readmore">
-												<a href="activity_detail.php?id='.$row->id.'"><span class="btn_readmore">Read More</span></a>
+												<a href="activity_detail.php?id='.$row->id.'"><span class="btn_readmore">'.$lang_text['read_more'][$lang].'</span></a>
 											</div>
 										</div>
 									</div>

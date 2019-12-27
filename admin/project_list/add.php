@@ -10,7 +10,10 @@
 
     if(isset($_POST["btn_add"])){
         $v_title = $connect->real_escape_string(@$_POST["txt_title"]);
+        $v_category = $connect->real_escape_string(@$_POST["txt_category"]);
         $v_date = $connect->real_escape_string(@$_POST["txt_date"]);
+        $v_email_saler = $connect->real_escape_string(@$_POST["txt_email_saler"]);
+        $v_phone_saler = $connect->real_escape_string(@$_POST["txt_phone_saler"]);
         $v_description = $connect->real_escape_string(@$_POST["txt_description"]);
         $v_detail = $connect->real_escape_string(@$_POST["txt_detail"]);
 
@@ -24,11 +27,14 @@
                         date,
                         title_en,
                         title_kh,
+                        `category_id`,
                         profile,
                         short_description_en,
                         short_description_kh,
                         detail_en,
                         detail_kh,
+                        email_saler,
+                        phone_saler,
                         created_by,
                         created_at
                     ) 
@@ -36,11 +42,14 @@
                         '$v_date',
                         '$v_title',
                         '$v_title',
+                        '$v_category',
                         '$image',
                         '$v_description',
                         '$v_description',
                         '$v_detail',
                         '$v_detail',
+                        '$v_email_saler',
+                        '$v_phone_saler',
                         '$v_current_user',
                         '$v_current_time_stamp'
                     )
@@ -100,9 +109,27 @@
                     <div class="form-body">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <div class="form-group">
-                                    <label for ="" class="form-label">Title <span class="required" aria-required="true">*</span></label>                                          
-                                    <input class="form-control" required name="txt_title" type="text" placeholder="Title">     
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="" class="form-label">Title <span class="required" aria-required="true">*</span></label>                                          
+                                            <input class="form-control" required name="txt_title" type="text" placeholder="Title">     
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Project Category <span class="required" aria-required="true">*</span></label>                                          
+                                            <select class = "form-control selectpicker" data-live-search="true" name="txt_category" required>
+                                                <option value="">Select Project Category</option>
+                                                <?php
+                                                    $position = mysqli_query($connect,"SELECT * FROM tbl_project_category ORDER BY name_en ASC");
+                                                    while ($row1 = mysqli_fetch_assoc($position)) {
+                                                        echo '<option value="'.$row1['id'].'">'.$row1['name_en'].' - '.$row1['name_kh'].'</option>';
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-6">
@@ -118,7 +145,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Email Saler <span class="required" aria-required="true">*</span></label>                                          
+                                            <input class="form-control" required name="txt_email_saler" type="text" placeholder="Enter email of saler">          
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Phone Saler <span class="required" aria-required="true">*</span></label>                                          
+                                            <input class="form-control" required name="txt_phone_saler" type="text" placeholder="Enter phone of saler">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">

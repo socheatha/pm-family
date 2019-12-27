@@ -207,4 +207,6 @@
 	$lang_text['terms_of_use'] = ['en'=>'Terms of Use' ,				'kh'=>'គោលការណ៍ ភាព ឯកជន',				'cn'=>''];
 
 	$lang_text['sm_site_map'] = ['en'=>'SITEMAP' ,				'kh'=>'ប្លង់វែបសាយ',				'cn'=>''];
+	
+	$lang_text['read_more'] = ['en'=>'READ MORE' ,				'kh'=>'ព័ត៌មានលម្អិត',				'cn'=>''];
  ?>

@@ -12,6 +12,9 @@
         $v_image = @$_FILES['txt_profile'];
         $v_id = @$_POST['txt_id'];
         $v_title = @$connect->real_escape_string($_POST['txt_title']); 
+        $v_category = $connect->real_escape_string(@$_POST["txt_category"]);
+        $v_email_saler = $connect->real_escape_string(@$_POST["txt_email_saler"]);
+        $v_phone_saler = $connect->real_escape_string(@$_POST["txt_phone_saler"]);
         $v_description = @$connect->real_escape_string($_POST['txt_description']); 
         $v_detail = @$connect->real_escape_string($_POST['txt_detail']); 
         if($v_image["name"] != ""){
@@ -25,13 +28,19 @@
 
             $query_update = "UPDATE tbl_projects SET
                     title_en='$v_title',
+                    category_id='$v_category',
                     profile='$new_name',
+                    email_saler='$v_email_saler',
+                    phone_saler='$v_phone_saler',
                     short_description_en='$v_description',
                     detail_en='$v_detail' WHERE id='$v_id'";
             
         }else{
             $query_update = "UPDATE tbl_projects SET
                     title_en='$v_title',
+                    category_id='$v_category',
+                    email_saler='$v_email_saler',
+                    phone_saler='$v_phone_saler',
                     short_description_en='$v_description',
                     detail_en='$v_detail' WHERE id='$v_id'";
         }
@@ -93,13 +102,55 @@
                                 <img width="100%" src="../../img/project/<?= @$row_old_slider->profile ?>" class="img-responsive img-responsive img-thumbnail" alt="Image">
                             </div>
                             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                                <div class="form-group">
-                                    <label>Title En<span class="required" aria-required="true">*</span></label>
-                                    <input type="text" class="form-control" name="txt_title" placeholder="Enter title" required="required" autocomplete="off" value="<?= @$row_old_slider->title_en ?>">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label>Title En<span class="required" aria-required="true">*</span></label>
+                                            <input type="text" class="form-control" name="txt_title" placeholder="Enter title" required="required" autocomplete="off" value="<?= @$row_old_slider->title_en ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Project Category <span class="required" aria-required="true">*</span></label>                                          
+                                            <select class = "form-control selectpicker" data-live-search="true" name="txt_category" required>
+                                                <option value="">Select Project Category</option>
+                                                <?php
+                                                    $position = mysqli_query($connect,"SELECT * FROM tbl_project_category ORDER BY name_en ASC");
+                                                    while ($row1 = mysqli_fetch_assoc($position)) {
+                                                        echo '<option value="'.$row1['id'].'" '.(@$row_old_slider->category_id==$row1['id']?'selected':'').'>'.$row1['name_en'].' - '.$row1['name_kh'].'</option>';
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Profile <span class="required" aria-required="true">*</span> </label>
-                                    <input type="file" class="form-control" name="txt_profile" placeholder="Choose profile image" autocomplete="off">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Date <span class="required" aria-required="true">*</span></label>                                          
+                                            <input class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" required name="txt_date" type="text" placeholder="Date" value="<?= @$row_old_slider->date ?>">          
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label>Profile <span class="required" aria-required="true">*</span> </label>
+                                            <input type="file" class="form-control" name="txt_profile" placeholder="Choose profile image" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Email Saler <span class="required" aria-required="true">*</span></label>                                          
+                                            <input class="form-control" required name="txt_email_saler" type="text" value="<?= @$row_old_slider->email_saler ?>">          
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Phone Saler <span class="required" aria-required="true">*</span></label>                                          
+                                            <input class="form-control" required name="txt_phone_saler" type="text" value="<?= @$row_old_slider->phone_saler ?>">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
