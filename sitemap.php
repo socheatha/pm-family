@@ -31,9 +31,9 @@
 			<div class="wpb_text_column wpb_content_element " >
 				<div class="wpb_wrapper">
 					<ul>
-						<li class="custom_list_menu"><a href="project_current.php"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
-						<li class="custom_list_menu"><a href="project_future.php"><?= $lang_text['l_future_pro'][$lang] ?></a></li>
-						<li class="custom_list_menu"><a href="project_existing.php"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
+						<li class="custom_list_menu"><a href="project.php?project_type_id=2"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
+						<li class="custom_list_menu"><a href="project.php?project_type_id=1"><?= $lang_text['l_future_pro'][$lang] ?></a></li>
+						<li class="custom_list_menu"><a href="project.php?project_type_id=3"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
 					</ul>
 				</div>
 			</div>

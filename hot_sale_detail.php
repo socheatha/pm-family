@@ -24,7 +24,7 @@
                                             <div class="info-content">
                                             <h4 class="entry-title">'.$row->{'title_'.$lang}.'</h4>
                                             <div class="date">
-                                                <i class="fa fa-calendar fa-fw"></i> '.$row->{'date'}.'
+                                                <i class="fa fa-calendar fa-fw"></i> '.$CustomDate->date_format($row->{'date'},"d-F-Y",$lang).'
                                             </div>
                                             <div class="description">'.$row->{'detail_'.$lang}.'</div>
                                         </div>

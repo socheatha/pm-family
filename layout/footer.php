@@ -23,6 +23,7 @@
         <!-- <script type='text/javascript' src='https://boreypenghuoth.com/wp-content/themes/gfproperty/js/skip-link-focus-fix.js?ver=20141010'></script> -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!-- <script type='text/javascript' src='https://boreypenghuoth.com/wp-content/themes/gfproperty/js/owl.carousel.min.js?ver=2.2.1'></script> -->
+        <script src="plugin/OwlCarousel2-2.3.4/owl.carousel.js"></script>
         <script type='text/javascript' src='js/jquery.magnific-popup.min.js'></script>
         <!-- <script type='text/javascript' src='https://boreypenghuoth.com/wp-content/themes/gfproperty/js/colorbox/jquery.colorbox.js?ver=1.1.0'></script> -->
         <!-- <script type='text/javascript' src='https://boreypenghuoth.com/wp-content/themes/gfproperty/js/sticky-kit.js?ver=1.1.0'></script> -->

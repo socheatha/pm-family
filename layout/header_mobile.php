@@ -23,8 +23,8 @@
                     </li>
                     <li id="menu-item-7138" class="has-submenu menu-item-7138"><a href="#"><?= $lang_text['m_project'][$lang] ?></a> <span class="icon-toggle"><i class="fa fa-plus"></i></span>
                     <ul class="sub-menu">
-                        <li id="menu-item-7143" class="menu-item-7143"><a href="project_current.php"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
-                        <li id="menu-item-7143" class="menu-item-7143"><a href="project_existing.php"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
+                        <li id="menu-item-7143" class="menu-item-7143"><a href="project.php?project_type_id=2"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
+                        <li id="menu-item-7143" class="menu-item-7143"><a href="project.php?project_type_id=3"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
                     </ul>
                     </li>
                     <li id="menu-item-7154" class="has-submenu menu-item-7154"><a href="#"><?= $lang_text['m_news'][$lang] ?></a> <span class="icon-toggle"><i class="fa fa-plus"></i></span>

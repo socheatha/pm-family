@@ -29,6 +29,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel='stylesheet' id='homesweet-template-css'  href='css/template.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="plugin/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugin/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
     <style id='homesweet-template-inline-css' type='text/css'>
         @import url('css/homesweet-template-inline-css.css');
     </style>
@@ -68,6 +70,72 @@
         a{
             text-decoration: none!important;
         }
+
+        <?php $hilight_color= $row_website_config->highlight_color; ?>
+        
+        #main-content h2.vc_custom_heading,
+        h1.title_sub, 
+        .simple-text h4,
+        .info-content .entry-title a:hover,
+        #main-content .widget-text-heading .title,
+        .entry-content .entry-title a:hover,
+        .btn-readmore, .entry-title a:active, .entry-title a:hover,
+        h4.title span,
+        .bo-social-facebook, .bo-social-twitter, .bo-social-instagram, .apus-topbar .information p, .bo-social-linkedin, .bo-social-tumblr, .bo-social-google, .bo-social-pinterest,
+        .sidebar-section ul li a:hover,.sidebar-section ul li a:focus,
+        .tagcloud a ,
+        .detail-post .meta > span,
+        .nav-links > a,
+        .form-contact h3.title,.widget-information-box .title span,
+        .widget-filter-form .filter-amenities-title i, .apus-footer .properties-list-small .property-box-price, .text-second, .second-color,
+        .widget-information-box a:hover,.widget-information-box a:focus,
+        .box-white .entry-title a:hover,
+        .text-theme, .entry-title.property-title, .property-content > .property-section > h3, .widget-title 
+        {
+            color: <?= $hilight_color ?>!important;
+        }
+         
+        /*Sticky-Header*/
+        .home .sticky-header .header-bottom,
+        .widget-content .owl-carousel .owl-controls .owl-dots .owl-dot.active span,
+        .tlp-portfolio button.selected, .tlp-portfolio button:hover,
+        .property-layout-full-icon .nav-table > li.active > a,
+        .property-content > .property-section .map-direction,
+        .property-layout-full-icon .nav-table > li > a,
+        .nav-links > a:hover ,
+        .nav-links > span.current,
+        .btn_readmore,
+        .form-contact .btn,
+        input.wpcf7-form-control.wpcf7-submit.btn.btn-submit
+        {
+            background: <?= $hilight_color ?>;
+            background-color: <?= $hilight_color ?>!important;
+        }
+        
+        /*Dropdown-Menu*/
+        #primary-menu .dropdown-menu li > a {color: #bf7a73 !important;}
+        #primary-menu.navbar-nav.megamenu .dropdown-menu li > a:hover, .navbar-nav.megamenu .dropdown-menu li > a:active {color: #f1cec8 !important;}
+        .btn-readmore:hover {color: #f1cec8;}
+        #main-content .border_custom .vc_sep_line {border-color: #facac9 !important;}
+        .vc_sep_holder .vc_sep_line {border-color: #f1cec8!important;}
+        /* .btn_readmore:hover {background-color: #f1cec8;} */
+        .tagcloud a:hover {background: #f1cec8;}
+        .tlp-content-holder h3 {border-bottom: 1px solid #facac9;}
+        .property-box-title .entry-title a:hover,.property-box-title .entry-title a:active,.property-box-title .entry-title a:focus {color: <?= $hilight_color ?>!important;}
+        span.phone-property,.phone-property:before {color: <?= $hilight_color ?>!important;}
+        .btn.btn-purple{background: <?= $hilight_color ?> !important;border-color: <?= $hilight_color ?>;}
+        .btn.btn-purple:hover {background: #facac9 !important;}
+        .btn.btn-purple:hover{border-color: #facac9;}
+        .property-layout-full-icon .nav-table > li > a:hover {background-color: #facac9 !important;}
+        
+        /*Contact*/
+        input.wpcf7-form-control.wpcf7-submit.btn.btn-submit:hover {color: <?= $hilight_color ?>;border: 1px solid <?= $hilight_color ?>;}
+
+        /*Footer*/
+        #apus-footer .vc_sep_line {border-color: #f1cec8!important;}
+        span.text-footer-descr:before,span.phone-footer:before,span.email-footer:before{color: #f1cec8!important;}
+        .menu li a:hover, .menu li a:active {color: #f1cec8!important;}
+
     </style>	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>

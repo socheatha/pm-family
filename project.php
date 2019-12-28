@@ -10,7 +10,12 @@
 								<div class="property-box-archive type-box">
 									<?php 
 										$i = 0;
-										$type = 1;
+										if(@$_GET['project_type_id']!=''){
+											$_SESSION['project_type_id']=$_GET['project_type_id'];
+										}else{
+											if(!@$_SESSION['project_type_id']) $_SESSION['project_type_id']=2;
+										}
+										$type = $_SESSION['project_type_id'];
 										$category_id = @$_GET['txt_category_id']!=""?$_GET['txt_category_id']:null;
 										$condition = $category_id?" category_id=".$category_id." ":" 1=1 ";
 										$get_data = $connect->query("SELECT 
@@ -19,7 +24,7 @@
 										FROM tbl_projects as A
 										LEFT JOIN tbl_pos_user AS B ON B.id=A.created_by
 										LEFT JOIN tbl_project_category AS C ON C.id=A.category_id
-										WHERE $condition
+										WHERE $condition AND A.type_id='$type'
 										ORDER BY A.date DESC");
 										while ($row = mysqli_fetch_object($get_data)) {
 											echo '<div class="cust-project-1 col-md-6 col-sm-6 col-property-box">		
@@ -70,11 +75,11 @@
 				<div class="col-md-4 col-sm-12 col-xs-12 pull-right">
 					<aside class="sidebar sidebar-right" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 						<aside id="filter_widget-16" class="widget widget_filter_widget">
-							<h2 class="widget-title"><span>    Find Property Type    </span></h2>
+							<h2 class="widget-title"><span>    <?= $lang_text['p_find_project'][$lang] ?>    </span></h2>
 							<form class="filter-property-form widget-filter-form vertical" method="get" action="<?= $_SERVER['PHP_SELF'] ?>">							
 								<div class="form-group group-select">
 									<select class="form-control" name="txt_category_id" id="filter_widget-16_status">
-										<option value=""> Find Property Type </option>
+										<option value=""> <?= $lang_text['p_all'][$lang] ?> </option>
 										<?php
 											$get_data = $connect->query("SELECT * FROM tbl_project_category ORDER BY name_".$lang." ASC");
 											while ($row = mysqli_fetch_object($get_data)) {
@@ -84,7 +89,7 @@
 									</select>
 								</div><!-- /.form-group -->																																																																																						
 							<div class="form-group">
-						<button class="button btn btn-purple btn-block" id="btn-property">Find Property Type</button>
+						<button class="button btn btn-purple btn-block" id="btn-property"><?= $lang_text['p_search'][$lang] ?></button>
 					</div><!-- /.form-group -->
 				</form>
 				<script>

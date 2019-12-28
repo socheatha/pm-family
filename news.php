@@ -30,7 +30,7 @@
 											<div class="info-content">
 											<h4 class="entry-title"> <a href="news_detail.php?id='.$row->id.'">'.$row->{'title_'.$lang}.'</a> </h4>
 											<div class="date">
-												<i class="fa fa-calendar fa-fw"></i> '.$row->{'date'}.'
+												<i class="fa fa-calendar fa-fw"></i> '.$CustomDate->date_format($row->{'date'},"d-F-Y",$lang).'
 											</div>
 											<div class="description">'.$row->{'short_description_'.$lang}.'</div>
 											<div class="post_readmore">

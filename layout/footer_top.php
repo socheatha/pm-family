@@ -30,9 +30,9 @@
                                     <h2 class="widgettitle"><?= $lang_text['f_project'][$lang] ?></h2>
                                     <div class="menu-quick-link-kh-container">
                                         <ul id="menu-quick-link-kh" class="menu">
-                                            <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="project_current.php"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
-                                            <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4418"><a href="project_future.php"><?= $lang_text['l_future_pro'][$lang] ?></a></li>
-                                            <li id="menu-item-4419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4419"><a href="project_existing.php"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
+                                            <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="project.php?project_type_id=2"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
+                                            <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4418"><a href="project.php?project_type_id=1"><?= $lang_text['l_future_pro'][$lang] ?></a></li>
+                                            <li id="menu-item-4419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4419"><a href="project.php?project_type_id=3"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
                                         </ul>
                                     </div>
                                 </div>

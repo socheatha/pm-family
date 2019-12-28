@@ -22,6 +22,7 @@
         $v_footer_bottom_color = $_POST['txt_footer_bottom_color'];
         $v_btt_bg = $_POST['txt_btt_bg'];
         $v_btt_color = $_POST['txt_btt_color'];
+        $v_highlight_color = $_POST['txt_highlight_color'];
         $sql = "UPDATE tbl_website_config SET 
             top_header_bg = '$v_top_header_bg',  
             top_header_color = '$v_top_header_color',
@@ -36,7 +37,8 @@
             footer_bottom_bg = '$v_footer_bottom_bg',
             footer_bottom_color = '$v_footer_bottom_color',
             btt_bg = '$v_btt_bg',
-            btt_color = '$v_btt_color'
+            btt_color = '$v_btt_color',
+            highlight_color = '$v_highlight_color'
         ";
         $result = mysqli_query($connect, $sql);
         if ($result) { 
@@ -168,6 +170,13 @@
                             echo '<td class="text-center" style="background-color: '.$row->btt_color.'; color: #aaa;">'.$row->btt_color.'</td>';
                             echo '<td>color of back to top button at footer right</td>';
                         echo '</tr>';
+                        echo '<tr>';
+                            echo '<td class="text-center">14</td>';
+                            echo '<td>ALL</td>';
+                            echo '<td>highlight color</td>';
+                            echo '<td class="text-center" style="background-color: '.$row->highlight_color.'; color: #aaa;">'.$row->highlight_color.'</td>';
+                            echo '<td>color of title text , button, ....</td>';
+                        echo '</tr>';
                     ?>
                 </tbody>
             </table>
@@ -284,6 +293,17 @@
                             <div class="form-group">
                                 <label for="">Bottom Footer Color:</label>
                                 <input type="color" class="form-control" placeholder="" name="txt_btt_color" required="" autocomplete="off" value="<?= $row->btt_color ?>"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <p><strong>Highlight Color</strong></p>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="">highlight color:</label>
+                                <input type="color" class="form-control" placeholder="" name="txt_highlight_color" required="" autocomplete="off" value="<?= $row->highlight_color ?>"/>
                             </div>
                         </div>
                     </div>

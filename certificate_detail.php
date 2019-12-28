@@ -21,7 +21,7 @@
                             <div class="others-info">
                                 <ul class="single-item-meta">
                                     <ul class="single-item-meta">
-                                        <li class="categories">'.$lang_text['date'][$lang].': '.$row->date.'</li>
+                                        <li class="categories">'.$lang_text['date'][$lang].': '.$CustomDate->date_format($row->{'date'},"d-F-Y",$lang).'</li>
                                         <li class="categories">'.$row->{'short_description_'.$lang}.'</li>
                                     </ul>
                                 </ul>                    

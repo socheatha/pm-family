@@ -5,4 +5,7 @@
 
     $social['fb'] = 'https://web.facebook.com/pmfamilyrealtyandinvestment/';
     $social['u_tube'] = 'https://www.youtube.com/channel/UCQ28cp5FBnMIPyRHmD9MwDA'; 
+
+    require_once('function/date.php');
+	$CustomDate = new CustomDate();
 ?>  

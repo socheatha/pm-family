@@ -11,6 +11,7 @@
     if(isset($_POST["btn_add"])){
         $v_title = $connect->real_escape_string(@$_POST["txt_title"]);
         $v_category = $connect->real_escape_string(@$_POST["txt_category"]);
+        $v_type = $connect->real_escape_string(@$_POST["txt_type"]);
         $v_date = $connect->real_escape_string(@$_POST["txt_date"]);
         $v_email_saler = $connect->real_escape_string(@$_POST["txt_email_saler"]);
         $v_phone_saler = $connect->real_escape_string(@$_POST["txt_phone_saler"]);
@@ -28,6 +29,7 @@
                         title_en,
                         title_kh,
                         `category_id`,
+                        `type_id`,
                         profile,
                         short_description_en,
                         short_description_kh,
@@ -43,6 +45,7 @@
                         '$v_title',
                         '$v_title',
                         '$v_category',
+                        '$v_type',
                         '$image',
                         '$v_description',
                         '$v_description',
@@ -60,7 +63,7 @@
                 }else{ 
                     $sms = '<div class="alert alert-danger">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>Error!</strong> Query Error ...
+                        <strong>Error!</strong> Query Error '.mysqli_error($connect).'...
                     </div>';  
                 }
             }else{
@@ -156,6 +159,22 @@
                                         <div class="form-group">
                                             <label for ="">Phone Saler <span class="required" aria-required="true">*</span></label>                                          
                                             <input class="form-control" required name="txt_phone_saler" type="text" placeholder="Enter phone of saler">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Project Type <span class="required" aria-required="true">*</span></label>                                          
+                                            <select class = "form-control" name="txt_type" required>
+                                                <option value="">Select Project Type</option>
+                                                <?php
+                                                    $position = mysqli_query($connect,"SELECT * FROM tbl_project_type ORDER BY name_en ASC");
+                                                    while ($row1 = mysqli_fetch_assoc($position)) {
+                                                        echo '<option value="'.$row1['id'].'">'.$row1['name_en'].' - '.$row1['name_kh'].'</option>';
+                                                    }
+                                                ?>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

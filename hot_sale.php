@@ -27,7 +27,7 @@
 											<a href="hot_sale_detail.php?id='.$row->id.'">'.$row->{'title_'.$lang}.'</a>
 										</h4>
 										<div class="meta">
-												<span class="date">'.$row->{'date'}.'</span>
+												<span class="date">'.$CustomDate->date_format($row->{'date'},"d-F-Y",$lang).'</span>
 											</div>
 										</div>
 										<div class="description">'.$row->{'short_description_'.$lang}.'</div>

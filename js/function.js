@@ -1070,7 +1070,8 @@ function makeArray( obj ) {
                     nav: $(this).data( 'nav' ),
                     dots: $(this).data( 'pagination' ),
                     items: 4,
-                    navText: ['<span class="ion-ios-arrow-left"></span>', '<span class="ion-ios-arrow-right"></span>']
+                    navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+                    autoHeight:true,
                 };
             
                 var owl = $(this);

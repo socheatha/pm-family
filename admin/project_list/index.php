@@ -31,6 +31,7 @@
                         <th>N&deg;</th>
                         <th>Info</th>
                         <th>Category</th>
+                        <th>Type</th>
                         <th class="text-center">Profile</th>
                         <th>Title</th>
                         <th>Contact</th>
@@ -44,10 +45,13 @@
                         $i = 0;
                         $get_data = $connect->query("SELECT 
                             A.*,B.username as name,
-                            C.name_en,C.name_kh
+                            C.name_en,C.name_kh,
+                            D.name_en AS type_name_en,
+                            D.name_kh AS type_name_kh
                         FROM tbl_projects as A
                         LEFT JOIN tbl_pos_user AS B ON B.id=A.created_by
                         LEFT JOIN tbl_project_category AS C ON C.id=A.category_id
+                        LEFT JOIN tbl_project_type AS D ON D.id=A.type_id
                         ORDER BY A.date DESC");
                         while ($row = mysqli_fetch_object($get_data)) {
                             echo '<tr>';
@@ -57,6 +61,7 @@
                                     <i class="fa fa-user fa-fw"></i> '.$row->name.'
                                 </td>';
                                 echo '<td>'.$row->name_en.'<br>'.$row->name_kh.'</td>';
+                                echo '<td>'.$row->type_name_en.'<br>'.$row->type_name_kh.'</td>';
                                 echo '<td class="text-center">
                                     <a href="../../img/project/'.$row->profile.'" target="_blank"><img src="../../img/project/'.$row->profile.'" height="50px"/></a>
                                 </td>';

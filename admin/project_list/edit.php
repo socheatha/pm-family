@@ -13,6 +13,7 @@
         $v_id = @$_POST['txt_id'];
         $v_title = @$connect->real_escape_string($_POST['txt_title']); 
         $v_category = $connect->real_escape_string(@$_POST["txt_category"]);
+        $v_type = $connect->real_escape_string(@$_POST["txt_type"]);
         $v_email_saler = $connect->real_escape_string(@$_POST["txt_email_saler"]);
         $v_phone_saler = $connect->real_escape_string(@$_POST["txt_phone_saler"]);
         $v_description = @$connect->real_escape_string($_POST['txt_description']); 
@@ -29,6 +30,7 @@
             $query_update = "UPDATE tbl_projects SET
                     title_en='$v_title',
                     category_id='$v_category',
+                    `type_id`='$v_type',
                     profile='$new_name',
                     email_saler='$v_email_saler',
                     phone_saler='$v_phone_saler',
@@ -39,6 +41,7 @@
             $query_update = "UPDATE tbl_projects SET
                     title_en='$v_title',
                     category_id='$v_category',
+                    `type_id`='$v_type',
                     email_saler='$v_email_saler',
                     phone_saler='$v_phone_saler',
                     short_description_en='$v_description',
@@ -149,6 +152,22 @@
                                         <div class="form-group">
                                             <label for ="">Phone Saler <span class="required" aria-required="true">*</span></label>                                          
                                             <input class="form-control" required name="txt_phone_saler" type="text" value="<?= @$row_old_slider->phone_saler ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for ="">Project Type <span class="required" aria-required="true">*</span></label>                                          
+                                            <select class = "form-control" name="txt_type" required>
+                                                <option value="">Select Project Type</option>
+                                                <?php
+                                                    $position = mysqli_query($connect,"SELECT * FROM tbl_project_type ORDER BY name_en ASC");
+                                                    while ($row1 = mysqli_fetch_assoc($position)) {
+                                                        echo '<option value="'.$row1['id'].'" '.(@$row_old_slider->type_id==$row1['id']?'selected':'').'>'.$row1['name_en'].' - '.$row1['name_kh'].'</option>';
+                                                    }
+                                                ?>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

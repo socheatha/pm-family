@@ -209,4 +209,11 @@
 	$lang_text['sm_site_map'] = ['en'=>'SITEMAP' ,				'kh'=>'ប្លង់វែបសាយ',				'cn'=>''];
 	
 	$lang_text['read_more'] = ['en'=>'READ MORE' ,				'kh'=>'ព័ត៌មានលម្អិត',				'cn'=>''];
+	
+	$lang_text['p_find_project'] = ['en'=>'Find Property Category' ,				'kh'=>'ស្វែងរកប្រភេទគម្រោង',				'cn'=>''];
+	$lang_text['p_search'] = ['en'=>'Search' ,				'kh'=>'ស្វែងរក',				'cn'=>''];
+	$lang_text['p_all'] = ['en'=>'All Category' ,				'kh'=>'ទាំងអស់',				'cn'=>''];
+	
+	$lang_text['p_comment'] = ['en'=>'Your Comment' ,				'kh'=>'មតិរបស់អ្នក',				'cn'=>''];
+	$lang_text['p_sent'] = ['en'=>'Sent' ,				'kh'=>'ផ្ញើរមតិរបស់អ្នក',				'cn'=>''];
  ?>

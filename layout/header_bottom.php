@@ -18,8 +18,8 @@
                         </li>
                         <li class="dropdown menu-item-7138 aligned-"><a href="#"  data-hover="dropdown" data-toggle="dropdown"><?= $lang_text['m_project'][$lang] ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li class="menu-item-7133 aligned-"><a href="project_current.php"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
-                                <li class="menu-item-7133 aligned-"><a href="project_existing.php"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
+                                <li class="menu-item-7133 aligned-"><a href="project.php?project_type_id=2"><?= $lang_text['l_current_pro'][$lang] ?></a></li>
+                                <li class="menu-item-7133 aligned-"><a href="project.php?project_type_id=3"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
                             </ul>
                         </li>
                         <li class="dropdown menu-item-7154 aligned-"><a href="#" class="dropdown-toggle"  data-hover="dropdown" data-toggle="dropdown"><?= $lang_text['m_news'][$lang] ?> <b class="caret"></b></a>

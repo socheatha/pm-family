@@ -55,7 +55,7 @@
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     <a href="../../index.php">
-                        <img src="../../img/img_logo/logo.png" width="100px" alt="logo" class="logo-default" /> 
+                        <img src="../../img/logo/logo.png" width="100px" alt="logo" class="logo-default" /> 
                     </a>
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
