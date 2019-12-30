@@ -45,11 +45,6 @@
 		</div>
 	</div>
 	<style>
-		.entry-title a, .recentTitle h5, .entry-title{
-            color: #444!important;
-			font-family: "Neuron-Bold", serif!important;
-            font-weight: bold!important;
-		} 
         .date{
             color: #077369;
             border-bottom: 1px solid #eee;

@@ -160,7 +160,7 @@
                     <?php include_once('header_bottom.php') ?>
                 </div>
         </header>	
-        <img src="img/banner/top_banner.png" width="100%"/>
+        <img src="img/logo/<?= $row_website_config->banner ?>" width="100%"/>
         <div id="apus-main-content">
             <?php //include_once('body_breadcrumb.php') ?>
             <section id="main-container" class="container inner">

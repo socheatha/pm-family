@@ -162,8 +162,7 @@ button.mfp-close,.mfp-counter {display: none;}
 .posts-list .list-default .entry-title{font-size: 18px}
 
 /*News*/
-.recentTitle h5 {font-size: 20px !important;color: #242424;font-weight: 600;}
-a.custom_side_news {font-weight: 600 !important;}
+.recentTitle h5 {font-size: 20px !important;color: #242424; }
 
 
 /*Project_right_sidebar*/

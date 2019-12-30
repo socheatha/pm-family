@@ -1,6 +1,6 @@
 <?php include_once('layout/header.php') ?>
 	<div class="row">
-		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+		<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
 			<div class="wpb_wrapper">
 				<div class="widget-blogs no-margin clearfix list ">
 					<div class="widget-content">
@@ -47,16 +47,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+		<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 			<?php include_once 'news_aside.php'; ?>
 		</div>
 	</div>
 	<style>
-		.entry-title a, .recentTitle h5, .entry-title{
-            color: #444!important;
-			font-family: "Neuron-Bold", serif!important;
-            font-weight: bold!important;
-		} 
 		.info-content{
 			margin-top: 15px;
 		}
