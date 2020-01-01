@@ -16,6 +16,12 @@
                     <i class="icon-diamond"></i>
                     <span class="title">Project Category</span>
                 </a>
+            </li>     
+            <li class="nav-item  ">
+                <a href="../project_feature/" class="nav-link nav-toggle">
+                    <i class="icon-diamond"></i>
+                    <span class="title">Project Feature</span>
+                </a>
             </li>            
         </ul>
         <!-- END SIDEBAR MENU -->

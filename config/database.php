@@ -9,7 +9,7 @@
 	}else{
 		$servername = "localhost";
 		$username = "root";
-		$password = "root";
+		$password = "";
 		$database = "pm_family";
 		$mysqldump = "/Applications/MAMP/Library/bin/mysqldump";
 	}

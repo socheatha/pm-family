@@ -30,10 +30,11 @@
                     <tr>
                         <th>N&deg;</th>
                         <th>Info</th>
+                        <th>Title</th>
                         <th>Category</th>
                         <th>Type</th>
                         <th class="text-center">Profile</th>
-                        <th>Title</th>
+                        <th>Feature</th>
                         <th>Contact</th>
                         <th class="text-center">Gallery</th>
                         <!-- <th>Short Description</th> -->
@@ -47,11 +48,18 @@
                             A.*,B.username as name,
                             C.name_en,C.name_kh,
                             D.name_en AS type_name_en,
-                            D.name_kh AS type_name_kh
+                            D.name_kh AS type_name_kh,
+                            GROUP_CONCAT(CONCAT(E.name_en,'-',E.name_kh) 
+                                ORDER BY E.name_en ASC 
+                                SEPARATOR '</li><li>') 
+                            AS features
                         FROM tbl_projects as A
                         LEFT JOIN tbl_pos_user AS B ON B.id=A.created_by
                         LEFT JOIN tbl_project_category AS C ON C.id=A.category_id
                         LEFT JOIN tbl_project_type AS D ON D.id=A.type_id
+                        LEFT JOIN tbl_proj_feat AS DE ON DE.project_id=A.id
+                        LEFT JOIN tbl_project_feature AS E ON E.id=DE.feature_id
+                        GROUP BY A.id
                         ORDER BY A.date DESC");
                         while ($row = mysqli_fetch_object($get_data)) {
                             echo '<tr>';
@@ -60,14 +68,19 @@
                                     <i class="fa fa-calendar fa-fw"></i> '.$row->date.'<br>
                                     <i class="fa fa-user fa-fw"></i> '.$row->name.'
                                 </td>';
+                                echo '<td>
+                                    <img src="../../img/flag/en.png"/>:'.$row->title_en.'<br>
+                                    <img src="../../img/flag/kh.png"/>:'.$row->title_kh.'
+                                </td>';
                                 echo '<td>'.$row->name_en.'<br>'.$row->name_kh.'</td>';
                                 echo '<td>'.$row->type_name_en.'<br>'.$row->type_name_kh.'</td>';
                                 echo '<td class="text-center">
                                     <a href="../../img/project/'.$row->profile.'" target="_blank"><img src="../../img/project/'.$row->profile.'" height="50px"/></a>
                                 </td>';
                                 echo '<td>
-                                    <img src="../../img/flag/en.png"/>:'.$row->title_en.'<br>
-                                    <img src="../../img/flag/kh.png"/>:'.$row->title_kh.'
+                                    <ul>
+                                        <li>'.$row->features.'</li>
+                                    </ul>
                                 </td>';
                                 echo '<td>
                                     <i class="fa fa-envelope fa-fw"></i> '.$row->email_saler.'<br>

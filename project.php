@@ -20,11 +20,18 @@
 										$condition = $category_id?" category_id=".$category_id." ":" 1=1 ";
 										$get_data = $connect->query("SELECT 
 											A.*,B.username as name,
-											C.name_en,C.name_kh
+											C.name_en,C.name_kh,
+											GROUP_CONCAT(CONCAT(E.name_en,'_dev_socheatha_',E.name_kh,'_dev_socheatha_',E.profile) 
+												ORDER BY E.name_en ASC 
+												SEPARATOR '_dev_split_') 
+											AS features
 										FROM tbl_projects as A
 										LEFT JOIN tbl_pos_user AS B ON B.id=A.created_by
 										LEFT JOIN tbl_project_category AS C ON C.id=A.category_id
+										LEFT JOIN tbl_proj_feat AS DE ON DE.project_id=A.id
+                        				LEFT JOIN tbl_project_feature AS E ON E.id=DE.feature_id
 										WHERE $condition AND A.type_id='$type'
+										GROUP BY A.id
 										ORDER BY A.date DESC");
 										while ($row = mysqli_fetch_object($get_data)) {
 											echo '<div class="cust-project-1 col-md-6 col-sm-6 col-property-box">		
@@ -33,7 +40,7 @@
 												<div class="property-box-image ">
 													<a href="project_detail.php?id='.$row->id.'" class="property-box-image-inner">
 														<div class="image-wrapper image-loaded">
-															<img src="img/project/'.$row->profile.'" data-src="'.$row->profile.'" width="480" height="310" alt="'.$row_website_config->{'keywords'}.'" class="attachment-homesweet-standard-size unveil-image">
+															<img src="img/project/'.$row->profile.'" data-src="'.$row->profile.'" width="480" height="310" alt="'.$row_website_config->{'keywords'}. '" class="attachment-homesweet-standard-size unveil-image">
 														</div>
 													</a>
 													
@@ -41,28 +48,40 @@
 												<div class="property-box-content">
 													<div class="property-box-title-wrap">
 														<div class="property-box-title">
-															<h3 class="entry-title">
-																<a href="https://boreypenghuoth.com/properties/the-star-polaris-23-condominium-in-cambodia/?lang=en">'.$row->{'title_'.$lang}.'</a></h3>
-																	<div class="property-row-labels">
-																		<span class="property-badge-contract">Sale</span>
-																		<span class="property-badge feature">Featured</span>
-																	</div>				
-																	<div class="property-row-address">
-																		<i class="fa fa-envelope" aria-hidden="true"></i>
-																		'.$row->email_saler.'
-																	</div>
-																	<div class="property-box-price text-theme">
-																		<a href="tel:'.$row->phone_saler.'">
-																			<span class="phone-property">&nbsp;&nbsp;'.$row->phone_saler.'</span>
-																		</a>
-																	</div>
-																</div>
-															</div><!-- /.property-box-title -->
-															<br>
-														</div><!-- /.property-box-content -->
-													</div>                        
+															<h3 class="entry-title"><a href="project_detail.php?id=' . $row->id . '">'.$row->{'title_'.$lang}.'</a></h3>
+															<div class="property-row-labels">
+																<span class="property-badge-contract">Sale</span>
+																<span class="property-badge feature">Featured</span>
+															</div>				
+															<div class="property-row-address">
+																<i class="fa fa-envelope" aria-hidden="true"></i>
+																'.$row->email_saler.'
+															</div>
+															<div class="property-box-price text-theme">
+																<a href="tel:'.$row->phone_saler.'">
+																	<span class="phone-property">&nbsp;&nbsp;'.$row->phone_saler.'</span>
+																</a>
+															</div>
+														</div>
+													</div><!-- /.property-box-title -->
+													<br>
+													<div class="property-box-field">
+														<div class="property-box-meta">';
+															
+															foreach(explode('_dev_split_',@$row->features) AS $feaure){
+																if($feaure){
+																	$feature_data = explode('_dev_socheatha_',$feaure);
+																	echo '<div class="field-item">
+																	<img src="img/project/feature/'.$feature_data[2].'">   
+																	<span>'.($lang=="kh"?$feature_data[1]:$feature_data[0]).'</span>
+																	</div>';
+																}
+															}
+														
+														echo '</div>
+													</div>
 												</div>
-											';
+											</div></div>';
 										}
 									?>
 								</div></div>

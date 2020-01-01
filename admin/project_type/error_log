@@ -1,0 +1,1 @@
+[27-Dec-2019 10:07:57 Asia/Bangkok] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/bsssolution/pm-family.bsssolution.com/admin/project_type/index.php on line 42

@@ -11,6 +11,7 @@
     if(isset($_POST["btn_add"])){
         $v_title = $connect->real_escape_string(@$_POST["txt_title"]);
         $v_category = $connect->real_escape_string(@$_POST["txt_category"]);
+        $v_features = $connect->real_escape_string();
         $v_type = $connect->real_escape_string(@$_POST["txt_type"]);
         $v_date = $connect->real_escape_string(@$_POST["txt_date"]);
         $v_email_saler = $connect->real_escape_string(@$_POST["txt_email_saler"]);
@@ -59,6 +60,11 @@
                 ";
                 $result = mysqli_query($connect, $sql);
                 if ($result) { 
+                    $last_id = $connect->insert_id;
+                    foreach(@$_POST["txt_feature"] as $v_feature){
+                        $connect->query("INSERT INTO tbl_proj_feat (project_id,feature_id) 
+                        VALUES ('{$last_id}','{$v_feature}')");
+                    }
                     echo '<script> window.location.replace("index.php");</script>'; 
                 }else{ 
                     $sms = '<div class="alert alert-danger">
@@ -108,7 +114,7 @@
                 <h3 class="panel-title"><?= $lang_text['inputBecarefull'][$lang] ?></h3>
             </div>
             <div class="panel-body">
-                 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="off" enctype="multipart/form-data">
+                 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="off" enctype="multipart/form-data" id="main_form">
                     <div class="form-body">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -185,6 +191,19 @@
                                     <textarea class="form-control" name="txt_description" rows="5" required placeholder="Short Description"></textarea>
                                 </div>
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label for ="" class="form-label"><strong>Features : </strong></label>  
+                            <?php
+                                $position = mysqli_query($connect,"SELECT * FROM tbl_project_feature ORDER BY name_en ASC");
+                                while ($row1 = mysqli_fetch_assoc($position)) {
+                                    echo '
+                                        <input type="checkbox" form="main_form" id="feature_'.$row1['id'].'" value="'.$row1['id'].'" name="txt_feature[]">
+                                        <label for ="feature_'.$row1['id'].'">'.$row1['name_en'].'-'.$row1['name_kh'].'</label>                                          
+                                        &nbsp; &nbsp;
+                                    ';
+                                }
+                            ?>  
                         </div>
                         <div class="form-group">
                             <label for ="">Detail <span class="required" aria-required="true">*</span>:</label>                                          

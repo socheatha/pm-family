@@ -10,6 +10,7 @@
 	if(@$_GET['del_id'] != ""){
 		$del_id = @$_GET['del_id'];
 		$connect->query("DELETE FROM tbl_projects WHERE id='$del_id'");
+		$connect->query("DELETE FROM tbl_proj_feat WHERE project_id='{$del_id}'");
 	}
 	if(@$_GET['del_img'] != ""){
 		$del_img = @$_GET['del_img'];

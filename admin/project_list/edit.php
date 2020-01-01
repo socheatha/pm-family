@@ -48,6 +48,12 @@
                     detail_en='$v_detail' WHERE id='$v_id'";
         }
         if($connect->query($query_update)){
+            $last_id = $v_id;
+            $connect->query("DELETE FROM tbl_proj_feat WHERE project_id='{$last_id}'");
+            foreach(@$_POST["txt_feature"] as $v_feature){
+                $connect->query("INSERT INTO tbl_proj_feat (project_id,feature_id) 
+                VALUES ('{$last_id}','{$v_feature}')");
+            }
             $sms = '<div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <strong>Successfull!</strong> Data update ...
@@ -61,16 +67,20 @@
     }
 
 
-// get old data 
+    // get old data 
     $edit_id = @$_GET['edit_id'];
     $edit_img = @$_GET['edit_img'];
-    $old_slider = $connect->query("SELECT * FROM tbl_projects WHERE id='$edit_id'");
+    $old_slider = $connect->query("SELECT 
+        A.*,
+        GROUP_CONCAT(B.feature_id) as old_features
+    FROM tbl_projects AS A 
+    LEFT JOIN tbl_proj_feat AS B ON B.project_id=A.id
+    WHERE id='$edit_id'
+    GROUP BY A.id
+    ");
     $row_old_slider = mysqli_fetch_object($old_slider);
 
-
- ?>
-
-
+?>
 <div class="portlet light bordered">
     <div class="row">
         <div class="col-xs-12">
@@ -96,7 +106,7 @@
                 <h3 class="panel-title">Input Information</h3>
             </div>
             <div class="panel-body">
-                 <form action="#" method="post" enctype="multipart/form-data">
+                 <form action="#" method="post" enctype="multipart/form-data" id="main_form">
                     <input type="hidden" name="txt_id" value="<?= @$row_old_slider->id ?>">
                     <input type="hidden" name="txt_old_img" value="<?= @$row_old_slider->profile ?>">
                     <div class="form-body">
@@ -180,6 +190,20 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <br>
+                                <div class="form-group">
+                                    <label for ="" class="form-label"><strong>Features : </strong></label>  
+                                    <?php
+                                        $position = mysqli_query($connect,"SELECT * FROM tbl_project_feature ORDER BY name_en ASC");
+                                        $old_features = explode(",",@$row_old_slider->old_features);
+                                        while ($row1 = mysqli_fetch_assoc($position)) {
+                                            echo '
+                                                <input type="checkbox" '.(in_array($row1['id'],$old_features,TRUE) ?'checked':'').' form="main_form" id="feature_'.$row1['id'].'" value="'.$row1['id'].'" name="txt_feature[]">
+                                                <label for ="feature_'.$row1['id'].'">'.$row1['name_en'].'-'.$row1['name_kh'].'</label>                                          
+                                                &nbsp; &nbsp;
+                                            ';
+                                        }
+                                    ?>  
+                                </div>
                                 <div class="form-group">
                                     <label>Detail En<span class="required" aria-required="true">*</span></label>
                                     <textarea class="form-control detail" id="detail" name="txt_detail" placeholder="Repeat your password" required="required" autocomplete="off"><?= @$row_old_slider->detail_en ?></textarea>
