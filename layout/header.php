@@ -305,6 +305,12 @@
             color: <?= $hilight_color ?> !important;
         }
 
+        #primary-menu .dropdown-menu li>a,
+        #primary-menu.navbar-nav.megamenu .dropdown-menu li>a:hover,
+        .navbar-nav.megamenu .dropdown-menu li>a:active {
+            color: <?= $row_website_config->{'menu_hover'} ?> !important;
+        }
+
         /*Sticky-Header*/
         .home .sticky-header .header-bottom,
         .widget-content .owl-carousel .owl-controls .owl-dots .owl-dot.active span,
@@ -320,16 +326,6 @@
         input.wpcf7-form-control.wpcf7-submit.btn.btn-submit {
             background: <?= $hilight_color ?>;
             background-color: <?= $hilight_color ?> !important;
-        }
-
-        /*Dropdown-Menu*/
-        #primary-menu .dropdown-menu li>a {
-            color: #bf7a73 !important;
-        }
-
-        #primary-menu.navbar-nav.megamenu .dropdown-menu li>a:hover,
-        .navbar-nav.megamenu .dropdown-menu li>a:active {
-            color: #f1cec8 !important;
         }
 
         .btn-readmore:hover {

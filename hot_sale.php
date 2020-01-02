@@ -37,7 +37,7 @@
 											<a class="btn-readmore" href="hot_sale_detail.php?id='.$row->id.'"> <span>'.$lang_text['read_more'][$lang].'</span></a>
 										</div>
 										<div class="pull-right">
-											<a class="btn-readmore" href="hot_sale_detail.php?id='.$row->id.'"> <i class="icon-ap_arrow-right"></i></a>
+											<a class="btn-readmore" href="hot_sale_detail.php?id='.$row->id.'"> <i class="fa fa-long-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
