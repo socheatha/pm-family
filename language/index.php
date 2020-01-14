@@ -216,4 +216,6 @@
 	
 	$lang_text['p_comment'] = ['en'=>'Your Comment' ,				'kh'=>'មតិរបស់អ្នក',				'cn'=>''];
 	$lang_text['p_sent'] = ['en'=>'Sent' ,				'kh'=>'ផ្ញើរមតិរបស់អ្នក',				'cn'=>''];
+	
+	$lang_text['hp_welcome'] = ['en'=>'Welcome To ' ,				'kh'=> 'សូមស្វាគមន៍មកកាន់',				'cn'=>''];
  ?>

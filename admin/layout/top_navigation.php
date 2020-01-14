@@ -2,7 +2,8 @@
     $lang='en';
 ?>
 <div class="page-actions">
-    <li class="btn-group"><a href="../dashboard/" class="btn red-haze btn-sm <?= (@$menu_active==0)?("active"):("") ?>"><?= $lang_text['dashborad'][$lang] ?></a></li>
+    <!-- <li class="btn-group"><a href="../dashboard/" class="btn red-haze btn-sm <?= (@$menu_active==0)?("active"):("") ?>"><?= $lang_text['dashborad'][$lang] ?></a></li> -->
+    <li class="btn-group"><a href="../home_page/" class="btn red-haze btn-sm <?= (@$menu_active==0)?("active"):("") ?>">Home Page</a></li>
     <!-- <?php if (@$_SESSION['user']->position_id == 1): ?>
     <li class="btn-group"><a href="../account/" class="btn red-haze btn-sm <?= (@$menu_active==6)?("active"):("") ?>"><?= $lang_text['incomeExpense'][$lang] ?></a></li>
     <?php endif ?>

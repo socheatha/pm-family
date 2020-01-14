@@ -437,7 +437,7 @@
         <div id="apus-main-content">
             <?php //include_once('body_breadcrumb.php') 
             ?>
-            <section id="main-container" class="container inner">
+            <section id="main-container" class="<?= @$is_index?'container-fluit': 'container' ?> inner">
                 <div class="row">
                     <div id="main-content" class="main-page col-xs-12">
                         <main id="main" class="site-main" role="main">

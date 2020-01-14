@@ -1,1 +1,1 @@
-<?php header("refresh:0;url=dashboard/index.php"); ?>
+<?php header("refresh:0;url=home_page/index.php"); ?>
