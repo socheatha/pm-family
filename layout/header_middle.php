@@ -21,7 +21,8 @@
                                     <div class="media phone-info pull-left">
                                         <div class="media-left media-middle">
                                             <div class="icon">
-                                                <img src="img/icon/phone_24.png" alt="<?= $row_website_config->{'title_'.$lang} ?>">
+                                                <!-- <img src="img/icon/phone_24.png" alt="<?= $row_website_config->{'title_'.$lang} ?>"> -->
+                                                <i class="fa fa-phone icon_color fa-2x"></i>
                                             </div>
                                         </div>
                                         <div class="media-body">
@@ -41,7 +42,8 @@
                                     <div class="media address-info pull-left">
                                         <div class="media-left media-middle">
                                             <div class="icon">
-                                                <img src="img/icon/location.png" alt="">
+                                                <!-- <img src="img/icon/location.png" alt=""> -->
+                                                <i class="fa fa-map-marker icon_color fa-2x"></i>
                                             </div>
                                         </div>
                                         <div class="media-body">

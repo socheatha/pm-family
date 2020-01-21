@@ -10,6 +10,7 @@
 if(isset($_POST["btn_change"])){
     $old_image = $_POST['old_image'];
     $old_banner = $_POST['old_banner'];
+    $old_bottom_banner = $_POST['old_bottom_banner'];
     $v_title_en = $_POST['txt_title_en'];
     $v_title_kh = $_POST['txt_title_kh'];
     $v_keywords = $_POST['txt_keywords'];
@@ -30,6 +31,13 @@ if(isset($_POST["btn_change"])){
             unlink("../../img/logo/".$old_banner);
         }
     }else { $banner = $old_banner; }
+    if(!empty($_FILES['bottom_banner']['size'])){
+        $bottom_banner = date('Y_m_d')."_".rand(1111,9999).".png";
+        move_uploaded_file($_FILES['bottom_banner']['tmp_name'],"../../img/logo/$bottom_banner");
+        if(file_exists("../../img/logo/".$old_bottom_banner)){
+            unlink("../../img/logo/".$old_bottom_banner);
+        }
+    }else { $bottom_banner = $old_bottom_banner; }
 
     $sql = "UPDATE tbl_website_config SET 
         title_en = '$v_title_en',  
@@ -38,7 +46,8 @@ if(isset($_POST["btn_change"])){
         description_en = '$v_description_en',
         description_kh = '$v_description_kh',
         logo = '$image',
-        `banner` = '$banner'
+        `banner` = '$banner',
+        `bottom_banner` = '$bottom_banner'
     ";
     $result = mysqli_query($connect, $sql);
     if ($result) { 
@@ -84,7 +93,12 @@ if(isset($_POST["btn_change"])){
                         $row = mysqli_fetch_object($get_data);
                         echo '<tr>';
                             echo '<td class="text-center"><img width="100px" src="../../img/logo/'.$row->logo.'"/></td>';
-                            echo '<td class="text-center"><img width="100px" src="../../img/logo/'.$row->banner.'"/></td>';
+                            echo '<td class="text-center">
+                                Header:<br>
+                                <img width="100px" src="../../img/logo/'.$row->banner.'"/>
+                                <br>Footer:<br>
+                                <img width="100px" src="../../img/logo/'.$row->bottom_banner.'"/>
+                            </td>';
                             echo '<td>'.$row->title_en.'</td>';
                             echo '<td>'.$row->title_kh.'</td>';
                             echo '<td>'.$row->keywords.'</td>';
@@ -110,15 +124,21 @@ if(isset($_POST["btn_change"])){
                 <form action="" method="POST" role="form" id="form_change" enctype="multipart/form-data">
                     <input type="hidden" name = "old_image" value="<?= $row->logo ?>" class="form-control">
                     <input type="hidden" name = "old_banner" value="<?= $row->banner ?>" class="form-control">
+                    <input type="hidden" name = "old_bottom_banner" value="<?= $row->bottom_banner ?>" class="form-control">
                     <div class="form-group">
                         <label for="">Logo:</label><br>
                         <img width="100%" class="img-thumbnail" src="../../img/logo/<?= $row->logo ?>"/>
                         <input type="file" name = "image" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="">Banner:</label><br>
+                        <label for="">Top Banner:</label><br>
                         <img width="100%" class="img-thumbnail" src="../../img/logo/<?= $row->banner ?>"/>
                         <input type="file" name = "banner" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Bottom Banner (Index):</label><br>
+                        <img width="100%" class="img-thumbnail" src="../../img/logo/<?= $row->bottom_banner ?>"/>
+                        <input type="file" name = "bottom_banner" class="form-control">
                     </div>
                     <div class="row">
                         <div class="col-xs-6">

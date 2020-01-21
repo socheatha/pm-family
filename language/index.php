@@ -22,7 +22,7 @@
  	$lang_text['savePassword'] = ['en'=>'Save Password',				'kh'=>'រក្សាទុក',				'cn'=>'最新消息'];
  	$lang_text['close'] = ['en'=>'Close',				'kh'=>'បិទ',				'cn'=>'最新消息'];
 
- 	$lang_text['feature'] = ['en'=>'Features',				'kh'=>'មុខងារ',				'cn'=>'最新消息'];
+ 	$lang_text['feature'] = ['en'=>'Features',				'kh'=> 'លក្ខណៈពិសេស',				'cn'=>'最新消息'];
 
  	$lang_text['addNew'] = ['en'=>'Add New',				'kh'=>'បន្ថែមថ្មី',				'cn'=>'最新消息'];
  	$lang_text['back'] = ['en'=>'Back',				'kh'=>'ថយក្រោយ',				'cn'=>'最新消息'];
@@ -184,7 +184,7 @@
 	$lang_text['l_sitemap'] = ['en'=>'Sitemap' ,				'kh'=>'ប្លង់វែបសាយ',				'cn'=>'最新消息'];
 	$lang_text['l_current_pro'] = ['en'=>'Current Projects' ,				'kh'=>'គម្រោងក្នុងពេលបច្ចុប្បន្ន',				'cn'=>'最新消息'];
 	$lang_text['l_future_pro'] = ['en'=>'Future Project' ,				'kh'=>'គម្រោងនាពេលអនាគត',				'cn'=>'最新消息'];
-	$lang_text['l_exist_pro'] = ['en'=>'Existing Projects' ,				'kh'=>'គម្រោងដែលបញ្ចប់ការសាងសង់',				'cn'=>'最新消息'];
+	$lang_text['l_exist_pro'] = ['en'=>'Existing Projects' ,				'kh'=> 'គម្រោងដែលបញ្ចប់ការអភិវឌ្ឍន៍',				'cn'=>'最新消息'];
 	$lang_text['l_email'] = ['en'=>'Email' ,				'kh'=>'អ៊ីមែល',				'cn'=>''];
 
 	//menu
@@ -195,8 +195,8 @@
 	$lang_text['m_promotion'] = ['en'=>'Promotions' ,				'kh'=>'ព័ត៌មានប្រូម៉ូសិន',				'cn'=>''];
 	$lang_text['m_contact'] = ['en'=>'CONTACT' ,				'kh'=>'ទំនាក់ទំនង',				'cn'=>''];
 	$lang_text['m_wwa'] = ['en'=>'Who We Are' ,				'kh'=>'សារពីអគ្គនាយក',				'cn'=>''];
-	$lang_text['m_csr'] = ['en'=>'Corporate Social Responsibility' ,				'kh'=>'ការរួមចំណែកនៅក្នុងសង្គម',				'cn'=>''];
-	$lang_text['m_activity'] = ['en'=>'Activity' ,				'kh'=>'សកម្មភាពនានា',				'cn'=>''];
+	$lang_text['m_csr'] = ['en'=>'Company Activity' ,				'kh'=>'សកម្មភាពរបស់ក្រុមហ៊ុន',				'cn'=>''];
+	$lang_text['m_activity'] = ['en'=>'Activity' ,				'kh'=>'សកម្មភាពផ្សេងៗ',				'cn'=>''];
 	$lang_text['m_honor'] = ['en'=>'Honor and Award' ,				'kh'=>'ប័ណ្ណកិត្តិយស និង ពានរង្វាន់',				'cn'=>''];
 	$lang_text['m_certificate'] = ['en'=>'Certificate' ,				'kh'=>'លិខិតថ្លែងអំណរគុណ',				'cn'=>''];
 	
@@ -218,4 +218,15 @@
 	$lang_text['p_sent'] = ['en'=>'Sent' ,				'kh'=>'ផ្ញើរមតិរបស់អ្នក',				'cn'=>''];
 	
 	$lang_text['hp_welcome'] = ['en'=>'Welcome To ' ,				'kh'=> 'សូមស្វាគមន៍មកកាន់',				'cn'=>''];
+	
+	
+	$lang_text['ct_message_title'] = ['en'=>'Please Message to Us ' ,				'kh'=> 'សូមផ្ញើសារមកកាន់យើងខ្ញុំ',				'cn'=>''];
+	$lang_text['ct_our_info'] = ['en'=>'Our Information ' ,				'kh'=> 'ព័ត៌មានរបស់យើងខ្ញុំ',				'cn'=>''];
+	$lang_text['ct_sent_button'] = ['en'=>" Sent " ,				'kh'=> 'ផ្ញើសារ',				'cn'=>''];
+	
+	$lang_text['ct_name'] = ['en'=>'Your Name ' ,				'kh'=>"ឈ្មោះតបស់អ្នក",				'cn'=>''];
+	$lang_text['ct_phone'] = ['en'=>'Phone Number ' ,				'kh'=> 	'លេខទូរសព្ទ័'	,'cn'=>''];
+	$lang_text['ct_email'] = ['en'=>'Your Email ' ,				'kh'=> 	'អ៊ុីម៉ែល'	,'cn'=>''];
+	$lang_text['ct_subject'] = ['en'=>'Subject ' ,				'kh'=> 'ប្រធានបទ',				'cn'=>''];
+	$lang_text['ct_message'] = ['en'=>'Message ' ,				'kh'=> 'ខ្លឹមសារ',				'cn'=>''];
  ?>

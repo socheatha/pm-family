@@ -301,7 +301,9 @@
         .widget-title,
         span.text-footer-descr:before,
         span.phone-footer:before,
-        span.email-footer:before {
+        span.email-footer:before,
+        .icon_color,
+        .h3_title_sub {
             color: <?= $hilight_color ?> !important;
         }
 
@@ -323,7 +325,9 @@
         .nav-links>span.current,
         .btn_readmore,
         .form-contact .btn,
-        input.wpcf7-form-control.wpcf7-submit.btn.btn-submit {
+        input.wpcf7-form-control.wpcf7-submit.btn.btn-submit,
+        .owl-next,
+        .owl-prev {
             background: <?= $hilight_color ?>;
             background-color: <?= $hilight_color ?> !important;
         }
@@ -394,22 +398,31 @@
         .recentTitle h5,
         .entry-title {
             text-decoration: none;
-            font-family: "Chenla", "Neuron", serif !important;
+            /* font-family: "Chenla", "Neuron", serif !important; */
             line-height: 1.3;
         }
 
         .title_sub,
         .portfolio-title,
         .widget-title span {
-            font-family: "Chenla", "Neuron", serif !important;
+            /* font-family: "Chenla", "Neuron", serif !important; */
         }
 
         span.phone-footer {
             font-family: "cursive", "Cute Font", "Chenla", "Neuron", serif !important;
         }
+
+        .h1,
+        h1 {
+            font-size: 28.5px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Chenla|Cute+Font&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <!-- End WOWSlider.com HEAD section -->
 </head>
 
 <body data-rsssl=1 class="page-template-default page page-id-6532 apus-body-loading image-lazy-loading wpb-js-composer js-comp-ver-5.2.1 vc_responsive">
@@ -433,11 +446,11 @@
                     <?php include_once('header_bottom.php') ?>
                 </div>
         </header>
-        <img src="img/logo/<?= $row_website_config->banner ?>" width="100%" />
+        <?= @!$is_index ? '<img src="img/logo/' . $row_website_config->banner . '" width="100%" />' : '' ?>
         <div id="apus-main-content">
             <?php //include_once('body_breadcrumb.php') 
             ?>
-            <section id="main-container" class="<?= @$is_index?'container-fluit': 'container' ?> inner">
+            <section id="main-container" class="<?= @$is_index ? 'container-fluit' : 'container' ?> inner">
                 <div class="row">
                     <div id="main-content" class="main-page col-xs-12">
                         <main id="main" class="site-main" role="main">

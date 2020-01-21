@@ -2,23 +2,43 @@
 $is_index = true;
 include_once('layout/header.php')
 ?>
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+	<div class="ws_images">
+		<ul>
+			<?php
+			$get_data_slide = $connect->query("SELECT A.*,B.username as name
+					FROM tbl_certificates as A
+					LEFT JOIN tbl_pos_user AS B ON B.id=A.created_by
+					WHERE A.type='9' ORDER BY A.index ASC");
+			$i = 0;
+			while ($row_slide = mysqli_fetch_object($get_data_slide)) {
+				echo '<li><a href="#"><img src="img/certificate/' . $row_slide->{'profile'} . '" alt="img' . $row_slide->id . '" title="' . $row_slide->{'title_' . $lang} . '" id="wows1_' . $i++ . '" /></a></li>';
+			}
+			?>
+		</ul>
+	</div>
+	<div class="ws_shadow"></div>
+</div>
+
 <div class="strip_bg">
-	<br>
-	<br>
-	<br>
+	<br><br>
+	<br><br>
+	<br><br>
 	<div class="vc_row-fluid container">
 		<div class="row">
 			<div class="wpb_column vc_column_container vc_col-sm-6">
 				<div class="vc_column-inner ">
 					<div class="wpb_wrapper">
 						<div class="widget-text-heading  default">
-							<h3 class="title"> <span><?= $lang_text['hp_welcome'][$lang] ?></span> <?= $row_website_config->{'hp_title_' . $lang}  ?> </h3>
+							<!-- <h3 class="title"> <span><?= $lang_text['hp_welcome'][$lang] ?></span> <?= $row_website_config->{'hp_title_' . $lang}  ?> </h3> -->
+							<h3 class="title"> <?= $row_website_config->{'hp_title_' . $lang}  ?> </h3>
 						</div>
 						<div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
 
 						<div class="wpb_text_column wpb_content_element ">
 							<div class="wpb_wrapper">
-								<p><?= $row_website_config->{'hp_description_' . $lang}  ?></p>
+								<p class="welcome_text"><?= $row_website_config->{'hp_description_' . $lang}  ?></p>
 							</div>
 						</div>
 					</div>
@@ -29,9 +49,9 @@ include_once('layout/header.php')
 					<div class="wpb_wrapper">
 						<div class="wpb_gallery wpb_content_element vc_clearfix">
 							<div class="wpb_wrapper">
-								<div class="rt-container-fluid tlp-portfolio">
+								<div class="tlp-portfolio">
 									<div class="tlp-portfolio-item">
-										<div class="tlp-portfolio-thum tlp-item">
+										<div class="tlp-item">
 											<div style="box-shadow: 0px 0px 3px #444;">
 												<div class="tlp-overlay">
 													<a class="tlp-zoom cboxElement" href="img/home_page/<?= $row_website_config->{'hp_image'} ?>">
@@ -59,9 +79,8 @@ include_once('layout/header.php')
 				<div class="wpb_wrapper">
 					<div class="vc_empty_space" style="height: 68px"><span class="vc_empty_space_inner"></span></div>
 					<div class="widget-text-heading  default">
-						<h3 class="title">
-							<span>គម្រោង</span>
-							ក្នុងពេលបច្ចុប្បន្ន </h3>
+						<!-- <h3 class="title"><span><?= $row_website_config->{'feature_prefix_' . $lang} ?></span> <?= $row_website_config->{'feature_title_' . $lang} ?> </h3> -->
+						<h3 class="title"> <?= $row_website_config->{'feature_title_' . $lang} ?> </h3>
 					</div>
 					<div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
 				</div>
@@ -75,12 +94,12 @@ include_once('layout/header.php')
 							<div class="vc_column-inner ">
 								<div class="wpb_wrapper">
 									<div class="widget widget-location-banner ">
-										<a href="/properties/ដឹស្តា-មេរាហ្កាដិន" class="widget-content">
+										<a href="<?= $row_website_config->{'feature_1_url'} ?>" class="widget-content">
 											<div class="image-wrapper image-loaded">
-												<img src="https://boreypenghuoth.com/wp-content/uploads/2019/07/The_Star_Mera_Garden_Home.jpg" data-src="https://boreypenghuoth.com/wp-content/uploads/2019/07/The_Star_Mera_Garden_Home.jpg" alt="" class="unveil-image">
+												<img src="img/project/<?= $row_website_config->{'feature_1_image'} ?>" data-src="img/project/<?= $row_website_config->{'feature_1_image'} ?>" alt="" class="unveil-image">
 											</div>
 											<div class="content-meta">
-												<h3 class="title">ដឹស្តា​ មេរាហ្កាដិន</h3>
+												<h3 class="title"><?= $row_website_config->{'feature_1_title_' . $lang} ?></h3>
 											</div>
 										</a>
 									</div>
@@ -97,12 +116,12 @@ include_once('layout/header.php')
 					<div class="wpb_raw_code wpb_content_element wpb_raw_html">
 						<div class="wpb_wrapper">
 							<div class="widget widget-location-banner ">
-								<a href="/properties/ដឹស្តា-ផ្លាទីនីម-ម៉ាស្ទើ/" class="widget-content">
+								<a href="<?= $row_website_config->{'feature_2_url'} ?>" class="widget-content">
 									<div class="image-wrapper image-loaded">
-										<img src="https://boreypenghuoth.com/wp-content/uploads/2019/07/The_Star_Platinum_Mastery_Home.jpg" data-src="https://boreypenghuoth.com/wp-content/uploads/2019/07/The_Star_Platinum_Mastery_Home.jpg" alt="" class="unveil-image">
+										<img src="img/project/<?= $row_website_config->{'feature_2_image'} ?>" data-src="img/project/<?= $row_website_config->{'feature_2_image'} ?>" alt="" class="unveil-image">
 									</div>
 									<div class="content-meta">
-										<h3 class="title">ដឹស្តា ផ្លាទីនីម ម៉ាស្ទើរី</h3>
+										<h3 class="title"><?= $row_website_config->{'feature_2_title_' . $lang} ?></h3>
 										<!-- <div class="properties">
 											1 Property </div> -->
 									</div>
@@ -117,12 +136,12 @@ include_once('layout/header.php')
 									<div class="wpb_raw_code wpb_content_element wpb_raw_html">
 										<div class="wpb_wrapper">
 											<div class="widget widget-location-banner ">
-												<a href="/properties/ដឹស្តា-ផ្លាទីនីម-រ៉ូសវីល/" class="widget-content">
+												<a href="<?= $row_website_config->{'feature_3_url'} ?>" class="widget-content">
 													<div class="image-wrapper image-loaded">
-														<img src="https://boreypenghuoth.com/wp-content/uploads/2019/07/The_Star_Platinum_Roseville_Home.jpg" data-src="https://boreypenghuoth.com/wp-content/uploads/2019/07/The_Star_Platinum_Roseville_Home.jpg" alt="" class="unveil-image">
+														<img src="img/project/<?= $row_website_config->{'feature_3_image'} ?>" data-src="img/project/<?= $row_website_config->{'feature_3_image'} ?>" alt="" class="unveil-image">
 													</div>
 													<div class="content-meta">
-														<h3 class="title">ដឹស្តា ផ្លាទីនីម រ៉ូសវីល</h3>
+														<h3 class="title"><?= $row_website_config->{'feature_3_title_' . $lang} ?></h3>
 														<!-- <div class="properties">
 															0 Properties </div> -->
 													</div>
@@ -150,8 +169,8 @@ include_once('layout/header.php')
 		<br>
 		<div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
 		<div class="widget-text-heading  default">
-			<h3 class="title">
-				<span><?= $row_website_config->{'vdo_prefix_' . $lang} ?></span> <?= $row_website_config->{'vdo_title_' . $lang} ?> </h3>
+			<!-- <h3 class="title"> <span><?= $row_website_config->{'vdo_prefix_' . $lang} ?></span> <?= $row_website_config->{'vdo_title_' . $lang} ?> </h3> -->
+			<h3 class="title"> <?= $row_website_config->{'vdo_title_' . $lang} ?> </h3>
 		</div>
 		<div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
 		<div class="vc_row wpb_row vc_inner vc_row-fluid">
@@ -178,8 +197,8 @@ include_once('layout/header.php')
 		<br>
 		<div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
 		<div class="widget-text-heading  default">
-			<h3 class="title">
-				<span>ព័ត៌មានថ្មី</span> ចុងក្រោយ </h3>
+			<!-- <h3 class="title"> <span>ព័ត៌មានថ្មី</span> ចុងក្រោយ </h3> -->
+			<h3 class="title"> ព័ត៌មានថ្មីចុងក្រោយ </h3>
 		</div>
 		<div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
 		<div class="widget-blogs no-margin clearfix carousel ">
@@ -233,9 +252,10 @@ include_once('layout/header.php')
 		</div>
 	</div>
 </div>
+
 <div class="vc_row-full-width vc_clearfix"></div>
 <div id="welcome_message" class="modal fade" role="dialog">
-	<div class="modal-dialog" style="margin-top: 10%;">
+	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<img width="100%" src="img/home_page/<?= $row_website_config->{'hp_image'} ?>" alt="<?= $row_website_config->keywords ?>" />
 		</div>
@@ -245,10 +265,59 @@ include_once('layout/header.php')
 	.strip_bg {
 		background-color: #f0f9fb;
 	}
+
+	.welcome_text {
+		line-height: 30px;
+	}
+
+	.modal {
+		text-align: center;
+	}
+
+	@media screen and (min-width: 768px) {
+		.modal:before {
+			display: inline-block;
+			vertical-align: middle;
+			content: " ";
+			height: 100%;
+		}
+	}
+
+	.modal-dialog {
+		display: inline-block;
+		text-align: left;
+		vertical-align: middle;
+	}
+
+	@media screen and (max-width: 768px) {
+		.modal-dialog {
+			margin-top: 150px;
+		}
+	}
+
+	#wowslider-container1 {
+		margin-top: -25px !important;
+	}
 </style>
 <script>
-	$(document).ready(function(){
+	$(document).ready(function() {
 		$("#welcome_message").modal('show');
+		$(document).ready(function() {
+			$('#slideshowHolder').jqFancyTransitions({
+				effect: 'wave', // wave, zipper, curtain
+				width: '100%', // width of panel
+				height: 400, // height of panel
+				strips: 20, // number of strips
+				delay: 1000, // delay between images in ms
+				stripDelay: 500, // delay beetwen strips in ms
+				titleOpacity: 0.7, // opacity of title
+				titleSpeed: 1000, // speed of title appereance in ms
+				position: 'alternate', // top, bottom, alternate, curtain
+				direction: 'fountainAlternate', // left, right, alternate, random, fountain, fountainAlternate
+				navigation: true, // prev and next navigation buttons
+				links: false // show images as links
+			});
+		});
 	});
 </script>
 <?php include_once('layout/footer.php') ?>

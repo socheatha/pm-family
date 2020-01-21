@@ -84,8 +84,8 @@ h1.title_sub,.simple-text h4 {color: #009345;}
 .nav-links > a{color: #009345;}
 .property-box-wrapper .property-favorite a{background: #009345 !important;}
 .property-box-wrapper .property-favorite a:hover,.property-row-labels span.feature,.btn.btn-purple:hover{background: #f5c539 !important;}
-.property-row-labels span,.owl-next,.owl-prev,.property-content > .property-section .map-direction,.btn.btn-purple,.property-box-share .property-box-share-content a,.nav-links > a:hover {background: #f1cec8 !important;}
-.property-box-share .property-box-share-content a:hover{background: #fff !important;}
+.property-row-labels span,.property-content > .property-section .map-direction,.btn.btn-purple,.property-box-share .property-box-share-content a,.nav-links > a:hover {background: #f1cec8 !important;}
+.property-box-share .property-box-share-content a:hover{background: #fff;}
  .text-theme,.entry-title.property-title,.property-content > .property-section > h3,.widget-title {color: #009345 !important;}
 	
 .navbar-nav.megamenu .dropdown-menu li > a {font-size:15px!important;}	
