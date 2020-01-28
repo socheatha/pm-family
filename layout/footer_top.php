@@ -24,7 +24,7 @@
                             </div>
                             <br><br>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="col-xs-12 col-sm-6 col-md-2">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
                                     <h2 class="widgettitle"><?= $lang_text['f_project'][$lang] ?></h2>
@@ -39,43 +39,32 @@
                             </div>
                             <br><br>
                         </div> 
+                        <div class="visible-sm visible-xs">
+                            <div class="clearfix"></div>
+                        </div>
                         <div class="col-xs-12 col-sm-6 col-md-3">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
                                     <h2 class="widgettitle"><?= $lang_text['f_social'][$lang] ?></h2>
-                                    <div class="wpb_text_column wpb_content_element  icon-footer" >
+                                    <div>
                                         <div class="wpb_wrapper">
-                                            <div class="social-group" style="text-align: left; width: 200px;">
+                                            <div>
                                                 <p>
-                                                    <a class="social-media" href="<?= $social['fb'] ?>" target="_blank" rel="noopener noreferrer"><img class="alignnone" style="width: 35px; margin-right: 8px; margin-bottom: 10px;" src="img/social/fbiconph-icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" width="40" height="40" /></a>
-                                                    <a class="social-media" href="<?= $social['u_tube'] ?>" target="_blank" rel="noopener noreferrer"><img class="alignnone" style="width: 35px; margin-right: 8px; margin-bottom: 10px; " src="img/social/youtubeiconph_icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" /></a>
+                                                    <a href="<?= $social['fb'] ?>" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px;" src="img/social/fbiconph-icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" width="40" height="40" /></a>
+                                                    <a href="<?= $social['u_tube'] ?>" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px; " src="img/social/youtubeiconph_icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" /></a>
+                                                    <a href="<?= $social['twitter'] ?>" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px; " src="img/social/twitter-icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" /></a>
+                                                    <a href="<?= $social['linkedin'] ?>" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-bottom: 10px; " src="img/social/linkiniconph_icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>" /></a>
                                                     <!-- <a class="social-media" href="#" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px;" src="img/social/gplusiconph_icon.png" alt="P.M Family Reality & Invesment" /></a> -->
                                                     <!-- <a class="social-media" href="#" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px;" src="img/social/instagramiconph_icon.png" alt="P.M Family Reality & Invesment" /></a> -->
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="vc_empty_space"   style="height: 15px" ><span class="vc_empty_space_inner"></span></div>
-                                    <div class="wpb_text_column wpb_content_element  icon-footer" >
-                                        <div class="wpb_wrapper">
-                                            <div class="social-group" style="text-align: left; width: 200px;">
-                                                <p>
-                                                    <!-- <a class="social-media" href="https://www.youtube.com/channel/UCQ28cp5FBnMIPyRHmD9MwDA" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px; margin-top: 8px;" src="img/social/youtubeiconph_icon.png" alt="P.M Family Reality & Invesment" /></a> -->
-                                                    <!-- <a class="social-media" href="#" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px; margin-top: 8px !important;" src="img/social/twitter-icon.png" alt="P.M Family Reality & Invesment" /></a> -->
-                                                    <!-- <a class="social-media" href="#" target="_blank" rel="noopener noreferrer"><img style="width: 35px; margin-right: 8px; margin-bottom: 10px; margin-top: 8px !important;" src="img/social/linkiniconph_icon.png" alt="P.M Family Reality & Invesment" /></a> -->
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <br><br>
-                            <br><br>
-                            <br><br>
-                            <br><br>
                             <br>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
                                     <h2 class="widgettitle"><?= $lang_text['f_contact'][$lang] ?></h2>
@@ -86,13 +75,14 @@
                                     <div class="wpb_text_column wpb_content_element " >
                                         <div class="wpb_wrapper">
                                         <p style="text-align: left;">
-                                            <span class="text-footer-descr"> 
+                                            <span class=""> 
+                                                <i class="fa fa-map-marker fa-fw"></i> 
                                                 <?= $row_website_config->{'address_line_1_'.$lang} ?>
                                                 <br> 
                                                 <?= $row_website_config->{'address_line_2_'.$lang} ?>
                                             </span></p>
-                                            <p><span class="phone-footer" style="font-size: 15px;"> <?= $row_website_config->{'phone_'.$lang} ?></span></p>
-                                            <p><span class="email-footer" style="font-size: 15px;"> <?= $lang_text['l_email'][$lang] ?>: <?= $row_website_config->{'email_address'} ?></span></p>
+                                            <p><span class="" style="font-size: 15px;"> <i class="fa fa-phone fa-fw"></i>  <?= $row_website_config->{'phone_'.$lang} ?></span></p>
+                                            <p><span class="" style="font-size: 15px;"><i class="fa fa-envelope fa-fw"></i>  <?= $lang_text['l_email'][$lang] ?>: <?= $row_website_config->{'email_address'} ?></span></p>
                                         </div>
                                     </div>
                                 </div>

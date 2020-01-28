@@ -22,7 +22,7 @@
                                 <li class="menu-item-7133 aligned-"><a href="project.php?project_type_id=3"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
                             </ul>
                         </li>
-                        <li class="dropdown menu-item-7154 aligned-"><a href="#" class="dropdown-toggle"  data-hover="dropdown" data-toggle="dropdown"><?= $lang_text['m_news'][$lang] ?> <b class="caret"></b></a>
+                        <li class="dropdown menu-item-7154 aligned-"><a href="#" class="dropdown-toggle"  data-hover="dropdown" data-toggle="dropdown"><?= $lang_text['m_news_cap'][$lang] ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="menu-item-7156 aligned-"><a href="hot_sale.php"><?= $lang_text['m_promotion'][$lang] ?></a></li>
                             <li class="menu-item-7155 aligned-"><a href="news.php"><?= $lang_text['m_news'][$lang] ?></a></li>

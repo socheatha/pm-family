@@ -2,7 +2,7 @@
     <div class="apus-offcanvas-body">
         <div class="offcanvas-head bg-primary">
             <a class="btn-toggle-canvas" data-toggle="offcanvas">
-                <i class="fa fa-close"></i> <strong>MENU</strong>
+                <i class="fa fa-close"></i> <strong><?= $lang_text['m_menu'][$lang] ?></strong>
             </a>
         </div>
         <nav class="navbar navbar-offcanvas navbar-static" role="navigation">
@@ -27,7 +27,7 @@
                         <li id="menu-item-7143" class="menu-item-7143"><a href="project.php?project_type_id=3"><?= $lang_text['l_exist_pro'][$lang] ?></a></li>
                     </ul>
                     </li>
-                    <li id="menu-item-7154" class="has-submenu menu-item-7154"><a href="#"><?= $lang_text['m_news'][$lang] ?></a> <span class="icon-toggle"><i class="fa fa-plus"></i></span>
+                    <li id="menu-item-7154" class="has-submenu menu-item-7154"><a href="#"><?= $lang_text['m_news_cap'][$lang] ?></a> <span class="icon-toggle"><i class="fa fa-plus"></i></span>
                     <ul class="sub-menu">
                         <li id="menu-item-7156" class="menu-item-7156"><a href="hot_sale.php"><?= $lang_text['m_promotion'][$lang] ?></a></li>
                         <li id="menu-item-7155" class="menu-item-7155"><a href="news.php"><?= $lang_text['m_news'][$lang] ?></a></li>

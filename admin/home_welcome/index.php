@@ -13,6 +13,7 @@ if(isset($_POST["btn_change"])){
     $v_title_kh = $_POST['txt_title_kh'];
     $v_description_en = $_POST['txt_description_en'];
     $v_description_kh = $_POST['txt_description_kh'];
+    $v_popup_status = isset($_POST['txt_popup_status'])?'1':'0';
 
     if(!empty($_FILES['banner']['size'])){
         $banner = date('Y_m_d')."_".rand(1111,9999).".png";
@@ -27,7 +28,8 @@ if(isset($_POST["btn_change"])){
         hp_title_kh = '$v_title_kh',
         hp_description_en = '$v_description_en',
         hp_description_kh = '$v_description_kh',
-        hp_image = '$banner'
+        hp_image = '$banner',
+        hp_popup_status = '$v_popup_status'
     ";
     $result = mysqli_query($connect, $sql);
     if ($result) { 
@@ -59,6 +61,7 @@ if(isset($_POST["btn_change"])){
                 <thead>
                     <tr role="row">
                         <th class="text-center">Image</th>
+                        <th class="text-center">Popup<br>Status</th>
                         <th class="text-center">Title</th>
                         <th class="text-center">Description</th>
                     </tr>
@@ -69,9 +72,12 @@ if(isset($_POST["btn_change"])){
                         $row = mysqli_fetch_object($get_data);
                         echo '<tr>';
                             echo '<td class="text-center"><img width="100px" src="../../img/home_page/'.$row->hp_image.'"/></td>';
+                            echo '<td class="text-center">
+                                <input type="checkbox" readonly '.($row->hp_popup_status?'checked':'').' />
+                            </td>';
                             echo '<td>
-                                <img src="../../img/flag/en.png"/>:'.$row->hp_title_en. '<br>
-                                <img src="../../img/flag/kh.png"/>:'. $row->hp_title_kh.'
+                            <img src="../../img/flag/en.png"/>:'.$row->hp_title_en. '<br>
+                            <img src="../../img/flag/kh.png"/>:'. $row->hp_title_kh.'
                             </td>';
                             echo '<td>
                                 <img src="../../img/flag/en.png"/>:'.$row->hp_description_en. '<br>
@@ -100,6 +106,10 @@ if(isset($_POST["btn_change"])){
                         <label for="">Image:</label><br>
                         <img width="100%" class="img-thumbnail" src="../../img/home_page/<?= $row->hp_image ?>"/>
                         <input type="file" name = "banner" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_popup_status">Popup Status:</label>
+                        <input id="txt_popup_status" name="txt_popup_status" type="checkbox" <?= $row->hp_popup_status?'checked':'' ?> />
                     </div>
                     <div class="row">
                         <div class="col-xs-6">

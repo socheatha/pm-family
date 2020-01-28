@@ -19,8 +19,8 @@
                             <a target="_blank" href="https://www.youtube.com/channel/UCQ28cp5FBnMIPyRHmD9MwDA" rel="noopener noreferrer"><img style="width: 20px; margin-right: 10px;" src="img/social/youtubeiconph_icon.png" alt="<?= $row_website_config->{'title_'.$lang} ?>"></a>
                             <!-- <a target="_blank" href="#" rel="noopener noreferrer"><img style="width: 20px; margin-right: 10px;" src="img/social/gplusiconph_icon.png" alt="P.M Family Reality & Invesment"></a> -->
                             <!-- <a target="_blank" href="#" rel="noopener noreferrer"><img style="width: 20px; margin-right: 10px;" src="img/social/instagramiconph_icon.png" alt="P.M Family Reality & Invesment"></a> -->
-                            <!-- <a target="_blank" href="#" rel="noopener noreferrer"><img style="width: 20px; margin-right: 10px;" src="img/social/twitter-icon.png" alt="P.M Family Reality & Invesment"></a> -->
-                            <!-- <a target="_blank" href="#" rel="noopener noreferrer"><img style="width: 20px; margin-right: 10px;" src="img/social/linkiniconph_icon.png" alt="P.M Family Reality & Invesment"></a> -->
+                            <a target="_blank" href="<?= $social['twitter'] ?>" rel="noopener noreferrer"><img style="width: 20px; margin-right: 10px;" src="img/social/twitter-icon.png" alt="P.M Family Reality & Invesment"></a>
+                            <a target="_blank" href="<?= $social['linkedin'] ?>" rel="noopener noreferrer"><img style="width: 20px; margin-right: 10px;" src="img/social/linkiniconph_icon.png" alt="P.M Family Reality & Invesment"></a>
                         </div>
                     </div>
                 </div>

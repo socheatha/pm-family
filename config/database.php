@@ -1,7 +1,7 @@
 <?php
-	$isHosted = false;
+	$isHosted = true;
 	if($isHosted){
-		$servername = "localhost";
+		$servername = "184.154.104.106";
 		$username = "pm_family";
 		$password = "5)P?@cvQp7#F";
 		$database = "pm_family";

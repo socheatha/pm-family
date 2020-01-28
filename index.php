@@ -79,6 +79,9 @@ include_once('layout/header.php')
 				<div class="wpb_wrapper">
 					<div class="vc_empty_space" style="height: 68px"><span class="vc_empty_space_inner"></span></div>
 					<div class="widget-text-heading  default">
+						<div class="visible-xs">
+							<br>
+						</div>
 						<!-- <h3 class="title"><span><?= $row_website_config->{'feature_prefix_' . $lang} ?></span> <?= $row_website_config->{'feature_title_' . $lang} ?> </h3> -->
 						<h3 class="title"> <?= $row_website_config->{'feature_title_' . $lang} ?> </h3>
 					</div>
@@ -254,7 +257,7 @@ include_once('layout/header.php')
 </div>
 
 <div class="vc_row-full-width vc_clearfix"></div>
-<div id="welcome_message" class="modal fade" role="dialog">
+<div id="<?= $row_website_config->hp_popup_status?'welcome_message':'welcome_message_1' ?>" class="modal fade" role="dialog">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<img width="100%" src="img/home_page/<?= $row_website_config->{'hp_image'} ?>" alt="<?= $row_website_config->keywords ?>" />
@@ -294,10 +297,25 @@ include_once('layout/header.php')
 			margin-top: 150px;
 		}
 	}
-
+	
+	/* //  custom slider */
 	#wowslider-container1 {
 		margin-top: -25px !important;
+		margin-bottom: -50px !important;
 	}
+	.ws_playpause,.ws-title-wrapper{
+		display: none!important;
+	}
+	#wowslider-container1 .ws_controls > *{
+		margin-top:  -50px!important;
+	}
+	#wowslider-container1 .ws_controls{
+		display: none;  
+	}
+	#wowslider-container1:hover .ws_controls{
+		display: block;
+	}
+	
 </style>
 <script>
 	$(document).ready(function() {

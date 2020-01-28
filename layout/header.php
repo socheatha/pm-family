@@ -204,13 +204,19 @@
 
         .header-bottom,
         .navbar-offcanvas-collapse,
-        .apus-offcanvas {
+        .apus-offcanvas,
+        #apus-header-mobile {
             background: <?= $row_website_config->{'menu_bg'} ?> !important;
         }
 
         .navbar-nav.megamenu>li>a,
         .navbar-offcanvas .navbar-nav>li>a {
             color: <?= $row_website_config->{'menu_color'} ?>;
+        }
+
+        .header-mobile .btn.dropdown-toggle,.header-mobile .btn.dropdown-toggle:hover, .header-mobile .btn.dropdown-toggle:active, .header-mobile .btn.dropdown-toggle:focus, .header-mobile .btn.offcanvas:hover, .header-mobile .btn.offcanvas:active, .header-mobile .btn.offcanvas:focus,
+        .header-mobile .btn.dropdown-toggle, {
+            font-size: 28px; color: <?= $row_website_config->{'middle_header_color'} ?>!important;
         }
 
         .navbar-nav.megamenu>li:hover>a,
@@ -362,8 +368,12 @@
             color: <?= $hilight_color ?> !important;
         }
 
+        .header-mobile .btn.offcanvas {
+            color: #fff;
+            padding-top: 25px;
+        }
         span.phone-property,
-        .phone-property:before {
+        .phone-property:before{
             color: <?= $hilight_color ?> !important;
         }
 
@@ -446,7 +456,7 @@
                     <?php include_once('header_bottom.php') ?>
                 </div>
         </header>
-        <?= @!$is_index ? '<img src="img/logo/' . $row_website_config->banner . '" width="100%" />' : '' ?>
+        <?= @!$is_index ? '<img class="hidden-xs" src="img/logo/' . $row_website_config->banner . '" width="100%" />' : '' ?>
         <div id="apus-main-content">
             <?php //include_once('body_breadcrumb.php') 
             ?>

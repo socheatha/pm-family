@@ -188,10 +188,12 @@
 	$lang_text['l_email'] = ['en'=>'Email' ,				'kh'=>'អ៊ីមែល',				'cn'=>''];
 
 	//menu
+	$lang_text['m_menu'] = ['en'=>'MENU' ,				'kh'=>'បញ្ជី',				'cn'=>''];
 	$lang_text['m_home'] = ['en'=>'HOME' ,				'kh'=>'ទំព័រដើម',				'cn'=>''];
 	$lang_text['m_about'] = ['en'=>'ABOUT US' ,				'kh'=>'អំពីក្រុមហ៊ុន',				'cn'=>''];
 	$lang_text['m_project'] = ['en'=>'PROJECTS' ,				'kh'=>'គម្រោង',				'cn'=>''];
-	$lang_text['m_news'] = ['en'=>'NEWS' ,				'kh'=>'ព័ត៌មានទូទៅ',				'cn'=>''];
+	$lang_text['m_news'] = ['en'=>'News' ,				'kh'=>'ព័ត៌មានទូទៅ',				'cn'=>''];
+	$lang_text['m_news_cap'] = ['en'=>'NEWS' ,				'kh'=>'ព័ត៌មានទូទៅ',				'cn'=>''];
 	$lang_text['m_promotion'] = ['en'=>'Promotions' ,				'kh'=>'ព័ត៌មានប្រូម៉ូសិន',				'cn'=>''];
 	$lang_text['m_contact'] = ['en'=>'CONTACT' ,				'kh'=>'ទំនាក់ទំនង',				'cn'=>''];
 	$lang_text['m_wwa'] = ['en'=>'Who We Are' ,				'kh'=>'សារពីអគ្គនាយក',				'cn'=>''];
