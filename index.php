@@ -206,7 +206,7 @@ include_once('layout/header.php')
 		<div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
 		<div class="widget-blogs no-margin clearfix carousel ">
 			<div class="widget-content">
-				<div class="owl-carousel posts owl-carousel-bottom" data-smallmedium="2" data-extrasmall="1" data-items="3" data-carousel="owl" data-pagination="true" data-nav="false">
+				<div class="owl-carousel posts owl-carousel-bottom" data-smallmedium="2" data-extrasmall="1" data-items="3" data-carousel="owl" data-pagination="false" data-nav="false">
 					<?php
 					$get_data = $connect->query("SELECT A.*,B.username as name
 							FROM tbl_news as A
@@ -220,7 +220,7 @@ include_once('layout/header.php')
 								<figure class="entry-thumb effect-v6">
 									<a class="post-thumbnail" href="news_detail.php?id=' . $row->id . '" aria-hidden="true">
 										<div class="image-wrapper">
-											<img src="img/news/' . $row->{'profile'} . '" data-src="img/news/' . $row->{'profile'} . '" width="780" height="641" alt="បញ្ចុះតម្លៃ៣% ទិញភ្លាម រស់នៅភ្លាម ពីវីឡាភ្លោះ ក្នុងគម្រោងបុរី ប៉េង ហួត ដឹស្តា ណេតឈឺរ៉ល" class="attachment-post-thumbnail unveil-image" />
+											<img src="img/news/' . $row->{'profile'} . '" data-src="img/news/' . $row->{'profile'} . '" width="780" height="641" alt="'. $row->{'title_' . $lang} .'" class="attachment-post-thumbnail unveil-image" />
 										</div>
 									</a>
 								</figure>
@@ -303,39 +303,25 @@ include_once('layout/header.php')
 		margin-top: -25px !important;
 		margin-bottom: -50px !important;
 	}
-	.ws_playpause,.ws-title-wrapper{
-		display: none!important;
-	}
 	#wowslider-container1 .ws_controls > *{
 		margin-top:  -50px!important;
 	}
-	#wowslider-container1 .ws_controls{
-		display: none;  
+	#wowslider-container1 .ws_controls,.ws-title-wrapper{
+		visibility: hidden;  
 	}
-	#wowslider-container1:hover .ws_controls{
-		display: block;
+	#wowslider-container1:hover .ws_controls .ws_next,#wowslider-container1:hover .ws_controls .ws_prev{
+		visibility: visible;
 	}
 	
 </style>
 <script>
-	$(document).ready(function() {
-		$("#welcome_message").modal('show');
-		$(document).ready(function() {
-			$('#slideshowHolder').jqFancyTransitions({
-				effect: 'wave', // wave, zipper, curtain
-				width: '100%', // width of panel
-				height: 400, // height of panel
-				strips: 20, // number of strips
-				delay: 1000, // delay between images in ms
-				stripDelay: 500, // delay beetwen strips in ms
-				titleOpacity: 0.7, // opacity of title
-				titleSpeed: 1000, // speed of title appereance in ms
-				position: 'alternate', // top, bottom, alternate, curtain
-				direction: 'fountainAlternate', // left, right, alternate, random, fountain, fountainAlternate
-				navigation: true, // prev and next navigation buttons
-				links: false // show images as links
-			});
-		});
-	});
+	$(document).ready(()=>{
+		$('#wowslider-container1').mouseover(function(){
+			$('#wowslider-container1 .ws_controls .ws_pause').click();
+		})
+		$('#wowslider-container1').mouseout(function(){
+			$('#wowslider-container1 .ws_controls .ws_play').click();
+		})
+	})
 </script>
 <?php include_once('layout/footer.php') ?>

@@ -196,7 +196,7 @@
 	$lang_text['m_news_cap'] = ['en'=>'NEWS' ,				'kh'=>'ព័ត៌មានទូទៅ',				'cn'=>''];
 	$lang_text['m_promotion'] = ['en'=>'Promotions' ,				'kh'=>'ព័ត៌មានប្រូម៉ូសិន',				'cn'=>''];
 	$lang_text['m_contact'] = ['en'=>'CONTACT' ,				'kh'=>'ទំនាក់ទំនង',				'cn'=>''];
-	$lang_text['m_wwa'] = ['en'=>'Who We Are' ,				'kh'=>'សារពីអគ្គនាយក',				'cn'=>''];
+	$lang_text['m_wwa'] = ['en'=>'Who We Are' ,				'kh'=>'សារពីនាយកក្រុមហ៊ុន',				'cn'=>''];
 	$lang_text['m_csr'] = ['en'=>'Company Activity' ,				'kh'=>'សកម្មភាពរបស់ក្រុមហ៊ុន',				'cn'=>''];
 	$lang_text['m_activity'] = ['en'=>'Activity' ,				'kh'=>'សកម្មភាពផ្សេងៗ',				'cn'=>''];
 	$lang_text['m_honor'] = ['en'=>'Honor and Award' ,				'kh'=>'ប័ណ្ណកិត្តិយស និង ពានរង្វាន់',				'cn'=>''];

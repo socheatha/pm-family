@@ -502,7 +502,7 @@ h2.widgettitle {
 
 /*Mobile-Menu*/
 	.navbar-offcanvas .navbar-nav > li > a,#main-mobile-menu .has-submenu > .sub-menu li a{color: #fff;}
-	.navbar-offcanvas .navbar-nav > li > .icon-toggle:hover,.navbar-offcanvas .navbar-nav > li > .icon-toggle,#main-mobile-menu .has-submenu > .sub-menu li > .icon-toggle,#main-mobile-menu .has-submenu > .sub-menu li > .icon-toggle:hover,.navbar-offcanvas .nav > li > a:hover,.navbar-offcanvas .nav > li > a:focus,#main-mobile-menu .has-submenu > .sub-menu li a:active,#main-mobile-menu .has-submenu > .sub-menu li a:focus {color: #f1cec8 !important;}
+	.navbar-offcanvas .navbar-nav > li > .icon-toggle:hover,.navbar-offcanvas .navbar-nav > li > .icon-toggle,#main-mobile-menu .has-submenu > .sub-menu li > .icon-toggle,#main-mobile-menu .has-submenu > .sub-menu li > .icon-toggle:hover,.navbar-offcanvas .nav > li > a:hover,.navbar-offcanvas .nav > li > a:focus,#main-mobile-menu .has-submenu > .sub-menu li a:active,#main-mobile-menu .has-submenu > .sub-menu li a:focus {color: #fff !important;}
 	.section-news .owl-carousel-bottom.owl-theme.owl-loaded {margin-bottom: -110px;}
 /*Breadcrum*/
 section.apus-breadscrumb {background-size: 100% 80% !important;}

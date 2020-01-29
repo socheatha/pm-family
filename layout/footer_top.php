@@ -7,7 +7,7 @@
                         <span class="vc_empty_space_inner"></span>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="col-xs-12 col-sm-6 col-md-2">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
                                     <h2 class="widgettitle"><?= $lang_text['f_other_page'][$lang] ?></h2>
@@ -16,7 +16,6 @@
                                             <li id="menu-item-4417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4417"><a href="privacy_policy.php"><?= $lang_text['l_term'][$lang] ?></a></li>
                                             <li id="menu-item-4418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4418"><a href="about_us.php"><?= $lang_text['l_about'][$lang] ?></a></li>
                                             <li id="menu-item-4419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4419"><a href="privacy_policy.php"><?= $lang_text['l_privacy'][$lang] ?></a></li>
-                                            <li id="menu-item-4421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4421"><a href="honor_and_award.php"><?= $lang_text['l_honor'][$lang] ?></a></li>
                                             <li id="menu-item-6568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6568"><a href="sitemap.php"><?= $lang_text['l_sitemap'][$lang] ?></a></li>
                                         </ul>
                                     </div>
@@ -24,7 +23,7 @@
                             </div>
                             <br><br>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-2">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
                                     <h2 class="widgettitle"><?= $lang_text['f_project'][$lang] ?></h2>
@@ -74,14 +73,14 @@
                                 <div class="">
                                     <div class="wpb_text_column wpb_content_element " >
                                         <div class="wpb_wrapper">
-                                        <p style="text-align: left;">
-                                            <span class=""> 
-                                                <i class="fa fa-map-marker fa-fw"></i> 
-                                                <?= $row_website_config->{'address_line_1_'.$lang} ?>
-                                                <br> 
-                                                <?= $row_website_config->{'address_line_2_'.$lang} ?>
-                                            </span></p>
-                                            <p><span class="" style="font-size: 15px;"> <i class="fa fa-phone fa-fw"></i>  <?= $row_website_config->{'phone_'.$lang} ?></span></p>
+                                            <p style="text-align: left;">
+                                                <span class="" style="font-size: 15px;"> 
+                                                    <i class="fa fa-map-marker fa-fw"></i> 
+                                                    <?= $row_website_config->{'address_line_1_'.$lang} ?>
+                                                    <br> 
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $row_website_config->{'address_line_2_'.$lang} ?>
+                                                </span></p>
+                                            <p><span class="" style="font-size: 15px;"><i class="fa fa-phone fa-fw"></i>  <?= $row_website_config->{'phone_'.$lang} ?></span></p>
                                             <p><span class="" style="font-size: 15px;"><i class="fa fa-envelope fa-fw"></i>  <?= $lang_text['l_email'][$lang] ?>: <?= $row_website_config->{'email_address'} ?></span></p>
                                         </div>
                                     </div>

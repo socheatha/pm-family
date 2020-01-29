@@ -1,6 +1,7 @@
 <br>
 </main><!-- .site-main -->
-<?= @$is_index ? '<img src="img/logo/' . $row_website_config->bottom_banner . '" width="100%"/>' : '' ?>
+<?= @$is_index ? '<img class="hidden-xs" src="img/logo/' . $row_website_config->bottom_banner . '" width="100%"/>' : '' ?>
+<?= @$is_index ? '<div class="visible-xs" style="width: 100%; height: 200px; background-image: url(\'img/logo/' . $row_website_config->bottom_banner . '\'); background-position: center center; background-size: cover;"></div>' : '' ?>
 </div><!-- .content-area -->
 </div>
 </section>
