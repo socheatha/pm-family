@@ -22,8 +22,10 @@ include_once('layout/header.php')
 </div>
 
 <div class="strip_bg">
-	<br><br>
-	<br><br>
+	<div class="hidden-xs">
+		<br><br>
+		<br><br>
+	</div>
 	<br><br>
 	<div class="vc_row-fluid container">
 		<div class="row">
@@ -301,27 +303,11 @@ include_once('layout/header.php')
 	/* //  custom slider */
 	#wowslider-container1 {
 		margin-top: -25px !important;
-		margin-bottom: -50px !important;
 	}
-	#wowslider-container1 .ws_controls > *{
-		margin-top:  -50px!important;
-	}
-	#wowslider-container1 .ws_controls,.ws-title-wrapper{
-		visibility: hidden;  
-	}
-	#wowslider-container1:hover .ws_controls .ws_next,#wowslider-container1:hover .ws_controls .ws_prev{
-		visibility: visible;
-	}
-	
 </style>
 <script>
-	$(document).ready(()=>{
-		$('#wowslider-container1').mouseover(function(){
-			$('#wowslider-container1 .ws_controls .ws_pause').click();
-		})
-		$('#wowslider-container1').mouseout(function(){
-			$('#wowslider-container1 .ws_controls .ws_play').click();
-		})
-	})
+	$(document).ready(function() {
+		$("#welcome_message").modal('show');
+	});
 </script>
 <?php include_once('layout/footer.php') ?>

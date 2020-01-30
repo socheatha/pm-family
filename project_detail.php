@@ -58,7 +58,7 @@ $sliders = explode(',', $row->sliders);
                         foreach (explode('_dev_split_', @$row->features) as $feaure) {
                             if ($feaure) {
                                 $feature_data = explode('_dev_socheatha_', $feaure);
-                                echo '<li><span>'. ($lang == "kh" ? $feature_data[1] : $feature_data[0]). ':</span> 
+                                echo '<li ><span>'. ($lang == "kh" ? $feature_data[1] : $feature_data[0]). ':</span> 
                                 <img src="img/project/feature/' . $feature_data[2] . '"></li>';
                             }
                         }

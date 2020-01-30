@@ -21965,11 +21965,11 @@
   @media (max-width: 479px) {
     /* line 295, ../sass/template/_responsive.scss */
     .columns-gap {
-      -webkit-column-count: 1;
+      -webkit-column-count: 2;
       /* Chrome, Safari, Opera */
-      -moz-column-count: 1;
+      -moz-column-count: 2;
       /* Firefox */
-      column-count: 1;
+      column-count: 2;
     }
   
     /* line 302, ../sass/template/_responsive.scss */

@@ -19,7 +19,7 @@
                             <td>
                                 <div class="pull-left">
                                     <div class="icon">
-                                        <i class="fa fa-phone icon_color fa-2x"></i>
+                                        <i class="fa fa-phone fa-fw icon_color fa-2x"></i>
                                     </div>
                                 </div>
                                 <div class="pull-right">
@@ -34,7 +34,7 @@
                             <td>
                                 <div class="pull-left">
                                     <div class="icon">
-                                        <i class="fa fa-map-marker icon_color fa-2x"></i>
+                                        <i class="fa fa-map-marker fa-fw icon_color fa-2x"></i>
                                     </div>
                                 </div>
                                 <div class="pull-right">
