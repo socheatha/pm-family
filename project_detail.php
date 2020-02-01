@@ -36,6 +36,7 @@ $prepare_meta_tags = '
         <div class="addthis_inline_share_toolbox"></div>
     </div>
 </h1>
+<div class="clearfix"></div>
 <br>
 <?php if (isset($row->sliders)) { ?>
     <div id="tab-gallery-map-gallery" class="tab-pane active">
