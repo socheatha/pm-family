@@ -14,7 +14,7 @@
     <meta name="keywords" content="<?= $row_website_config->{'keywords'} ?>">
     <meta name="description" content="<?= $row_website_config->{'description_' . $lang} ?>">
     <meta name="author" content="Bss | Socheatha Tey">
-
+    <?= $prepare_meta_tags??'' ?>
     <style id='rs-plugin-settings-inline-css' type='text/css'>
         #rs-demo-id {}
     </style>

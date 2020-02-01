@@ -17,8 +17,18 @@ $get_data = $connect->query("SELECT A.*,
         LEFT JOIN tbl_project_images as B ON B.parent_id=A.id
         WHERE A.id='$id'");
 $row = mysqli_fetch_object($get_data);
-$APP_TITLE = $row->{'title_'.$lang};
 $sliders = explode(',', $row->sliders);
+
+// prepare for fb share
+$APP_TITLE = $row->{'title_'.$lang};
+$prepare_meta_tags = '
+    <meta property="og:title" content="'.$row->{'title_'.$lang}.'" />
+    <meta property="og:description " content="'.$row->phone_saler.' | '.$row->email_saler.'" />
+    <meta property="og:site_name" content="'.$_SERVER['HTTP_HOST'].'" />
+    <meta property="og:url" content="'.$base_url.$_SERVER['REQUEST_URI'].'" />
+    <meta property="og:image" content="'.$base_url.$_SERVER['REQUEST_URI'].'/../img/project/'. $row->{'profile'}.'" />
+';
+
 ?>
 <?php include_once('layout/header.php') ?>
 <h1 class="title_sub title_border_bottom"><?= $row->{'title_' . $lang} ?>
@@ -26,7 +36,7 @@ $sliders = explode(',', $row->sliders);
         <div class="addthis_inline_share_toolbox"></div>
     </div>
 </h1>
-<hr>
+<br>
 <?php if (isset($row->sliders)) { ?>
     <div id="tab-gallery-map-gallery" class="tab-pane active">
         <div class="property-gallery">

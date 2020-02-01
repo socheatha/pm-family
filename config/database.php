@@ -31,4 +31,12 @@
 		header('location: '.$_SERVER['PHP_SELF']); 
 	}
 	if(@$_SESSION['language'] != ""){ $lang = @$_SESSION['language']; }else{ $lang = 'kh'; }
+
+
+	if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+        $base_url = "https://";   
+    else  
+        $base_url = "http://";   
+    // Append the host(domain name, ip) to the URL.   
+    $base_url.= $_SERVER['HTTP_HOST'];
 ?>
