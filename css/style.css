@@ -693,3 +693,8 @@ h3.available-in {
 .apus-page-loading {
     background: url('../img/tools/loading-2.gif') no-repeat scroll center center/80px auto white;
 }
+
+.title_border_bottom{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+}

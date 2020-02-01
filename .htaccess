@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^project([^/]*)\.html$ project_detail.php?id=$1 [L]

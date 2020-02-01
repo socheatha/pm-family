@@ -1,4 +1,7 @@
-<?php include_once('layout/header.php') ?>
+<?php 
+	$APP_TITLE = "Policy Privacy";
+	include_once('layout/header.php') 
+?>
 	<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><h2 style="color: #009345;text-align: left" class="vc_custom_heading title_sub"><?= $lang_text['terms_of_use'][$lang] ?></h2>
 		<div class="wpb_text_column wpb_content_element ">
 			<div class="wpb_wrapper">

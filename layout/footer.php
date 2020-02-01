@@ -45,6 +45,9 @@
 
 <script type="text/javascript" src="engine1/wowslider.js"></script>
 <script type="text/javascript" src="engine1/script.js"></script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e3591597a035cf0"></script>
+
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">

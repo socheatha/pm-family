@@ -1,4 +1,7 @@
-<?php include_once('layout/header.php') ?>
+<?php 
+	$APP_TITLE = "Our Activity";
+	include_once('layout/header.php') 
+?>
 	<div class="row">
 		<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
 			<div class="wpb_wrapper">

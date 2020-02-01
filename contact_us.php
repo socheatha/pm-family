@@ -1,4 +1,7 @@
-<?php include_once('layout/header.php') ?>
+<?php 
+	$APP_TITLE = "Contact Us";
+	include_once('layout/header.php') 
+?>
 <br><br>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.490550926209!2d104.77139531434194!3d11.516626248244457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31094fd87d628643%3A0x7c04b515d0624d73!2sP.M%20Family%20Realty%20%26%20Investment!5e0!3m2!1sen!2skh!4v1579180671279!5m2!1sen!2skh" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 <br><br><br><br>
@@ -58,43 +61,45 @@
 			<div class="description">
 				<div class="space-30"></div>
 				<div class="information-footer">
-					<div class="media">
-						<div class="media-left media-middle">
-							<div class="icon">
-								<i class="fa fa-paper-plane"></i>
-							</div>
-						</div>
-						<div class="media-body media-middle">
-							<?= $row_website_config->{'address_line_1_' . $lang} ?><br>
-							<?= $row_website_config->{'address_line_2_' . $lang} ?><br>
-						</div>
-					</div>
-					<div class="media">
-						<div class="media-left media-middle">
-							<div class="icon">
-								<i class="fa fa-phone"></i>
-							</div>
-						</div>
-						<div class="media-body media-middle">
-							<p><?= $row_website_config->{'phone_' . $lang} ?></p>
-						</div>
-					</div>
-					<div class="media">
-						<div class="media-left">
-							<div class="icon">
-								<i class="fa fa-envelope"></i>
-							</div>
-						</div>
-						<div class="media-body media-middle">
-							<p><?= $row_website_config->{'email_address'} ?></p>
-						</div>
-					</div>
+					<table>
+						<tr style="font-size: 15px;">
+							<td width="25px" class="text-center"><i class="fa fa-map-marker fa-fw" style="font-size: 20px;"></i></td>
+							<td>
+								<?= $row_website_config->{'address_line_1_'.$lang} ?>
+								<?= $row_website_config->{'address_line_2_'.$lang} ?>
+							</td>
+						</tr>
+						<tr><td colspan="2" height="10px"></td></tr>
+						<tr style="font-size: 15px;">
+							<td class="text-center"><i class="fa fa-phone fa-fw"></i></td>
+							<td style="white-space: nowrap;">
+								<?= $row_website_config->{'phone_'.$lang} ?>
+							</td>
+						</tr>
+						<tr><td colspan="2" height="10px"></td></tr>
+						<tr style="font-size: 15px;">
+							<td class="text-center"><i class="fa fa-envelope fa-fw"></i></td>
+							<td style="white-space: nowrap;">
+								<?= ' &nbsp;'.$lang_text['l_email'][$lang] ?>: <?= $row_website_config->{'email_address'} ?>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 			<ul class="social">
 				<li>
 					<a href="<?= $social['fb'] ?>" target="_blank" class="facebook">
-						<i class="fa fa-facebook "></i>
+						&nbsp;&nbsp;<i class="fa fa-facebook "></i>
+					</a>
+				</li>
+				<li>
+					<a href="<?= $social['u_tube'] ?>" target="_blank" class="youtube">
+						<i class="fa fa-youtube "></i>
+					</a>
+				</li>
+				<li>
+					<a href="<?= $social['u_tube'] ?>" target="_blank" class="youtube">
+						<i class="fa fa-twitter "></i>
 					</a>
 				</li>
 				<li>

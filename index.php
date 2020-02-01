@@ -1,4 +1,5 @@
 <?php
+$APP_TITLE = "Home Page";
 $is_index = true;
 include_once('layout/header.php')
 ?>
@@ -262,6 +263,7 @@ include_once('layout/header.php')
 <div id="<?= $row_website_config->hp_popup_status?'welcome_message':'welcome_message_1' ?>" class="modal fade" role="dialog">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
+			<a data-toggle="modal" href='#welcome_message' style="background: blue; padding: 5px 10px; border-radius: 50%; position: absolute; right: -10px; top: -10px;"><i class="fa fa-times" style="color: #fff;"></i><a/>
 			<img width="100%" src="img/home_page/<?= $row_website_config->{'hp_image'} ?>" alt="<?= $row_website_config->keywords ?>" />
 		</div>
 	</div>
@@ -277,6 +279,9 @@ include_once('layout/header.php')
 
 	.modal {
 		text-align: center;
+	}
+	.modal-open {
+		overflow: scroll;
 	}
 
 	@media screen and (min-width: 768px) {
@@ -308,6 +313,9 @@ include_once('layout/header.php')
 <script>
 	$(document).ready(function() {
 		$("#welcome_message").modal('show');
+		setTimeout(() => {
+			$("#welcome_message").modal('hide');
+		}, 10000);
 	});
 </script>
 <?php include_once('layout/footer.php') ?>

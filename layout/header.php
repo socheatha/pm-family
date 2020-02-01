@@ -8,9 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
-    <link href="https://fonts.googleapis.com/css?family=Hanuman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hanuman|Teko" rel="stylesheet">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>ប្លង់វែបសាយ | <?= $row_website_config->{'title_' . $lang} ?></title>
+    <title><?= $APP_TITLE??$row_website_config->{'title_' . $lang} ?></title>
     <meta name="keywords" content="<?= $row_website_config->{'keywords'} ?>">
     <meta name="description" content="<?= $row_website_config->{'description_' . $lang} ?>">
     <meta name="author" content="Bss | Socheatha Tey">

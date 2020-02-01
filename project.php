@@ -1,4 +1,7 @@
-<?php include_once('layout/header.php') ?>
+<?php 
+	$APP_TITLE = "Project";
+	include_once('layout/header.php') 
+?>
 	<div class="container">
 		<div class="row clearfix">
 			<div id="main-content" class="col-md-8 col-sm-12 col-xs-12 ">
@@ -38,7 +41,7 @@
 												<div class="property-box property-box-grid property-box-wrapper" data-latitude="40.66781969999999" data-longitude="-73.99436759999998" data-markerid="marker-5441">
 													
 												<div class="property-box-image ">
-													<a href="project_detail.php?id='.$row->id.'" class="property-box-image-inner">
+													<a href="project'.$row->id.'.html" class="property-box-image-inner">
 														<div class="image-wrapper image-loaded">
 															<img src="img/project/'.$row->profile.'" data-src="'.$row->profile.'" width="480" height="310" alt="'.$row_website_config->{'keywords'}. '" class="attachment-homesweet-standard-size unveil-image">
 														</div>

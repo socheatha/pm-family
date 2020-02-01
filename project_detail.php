@@ -1,4 +1,4 @@
-<?php include_once('layout/header.php') ?>
+<?php include_once 'config/database.php' ?>
 <?php
 $id = @$_GET['id'];
 if (!$id) {
@@ -17,9 +17,16 @@ $get_data = $connect->query("SELECT A.*,
         LEFT JOIN tbl_project_images as B ON B.parent_id=A.id
         WHERE A.id='$id'");
 $row = mysqli_fetch_object($get_data);
+$APP_TITLE = $row->{'title_'.$lang};
 $sliders = explode(',', $row->sliders);
 ?>
-<h1 class="title_sub"><?= $row->{'title_' . $lang} ?></h1><br>
+<?php include_once('layout/header.php') ?>
+<h1 class="title_sub title_border_bottom"><?= $row->{'title_' . $lang} ?>
+    <div class="pull-right">
+        <div class="addthis_inline_share_toolbox"></div>
+    </div>
+</h1>
+<hr>
 <?php if (isset($row->sliders)) { ?>
     <div id="tab-gallery-map-gallery" class="tab-pane active">
         <div class="property-gallery">
@@ -35,10 +42,10 @@ $sliders = explode(',', $row->sliders);
                 $s_index = 0;
                 foreach ($sliders as $slider) {
                     echo ' <div class="thumb-link ' . ($s_index++ == 0 ? 'active' : '') . '">
-                                <a href="#">
-                                    <img width="194" src="img/project/' . $slider . '" class="attachment-homesweet-gallery-thumbnails size-homesweet-gallery-thumbnails" alt="' . $row_website_config->{'keywords'} . '"/>						
-                                </a>
-                            </div>';
+                        <a href="#">
+                            <img width="194" src="img/project/' . $slider . '" class="attachment-homesweet-gallery-thumbnails size-homesweet-gallery-thumbnails" alt="' . $row_website_config->{'keywords'} . '"/>						
+                        </a>
+                    </div>';
                 }
                 ?>
             </div><!-- /.property-gallery -->

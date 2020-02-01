@@ -67,24 +67,36 @@
                             <div class="apus_custom_menu wpb_content_element ">
                                 <div class="">
                                     <h2 class="widgettitle"><?= $lang_text['f_contact'][$lang] ?></h2>
+                                        <div style="margin-top: -1.5px;">
+                                            <table>
+                                                <tr style="font-size: 15px;">
+                                                    <td width="25px" class="text-center"><i class="fa fa-map-marker fa-fw" style="font-size: 20px;"></i></td>
+                                                    <td>
+                                                        <span style="white-space: nowrap;"><?= $row_website_config->{'address_line_1_'.$lang} ?></span>
+                                                        <br> 
+                                                        <?= $row_website_config->{'address_line_2_'.$lang} ?>
+                                                    </td>
+                                                </tr>
+                                                <tr><td colspan="2" height="10px"></td></tr>
+                                                <tr style="font-size: 15px;">
+                                                    <td class="text-center"><i class="fa fa-phone fa-fw"></i></td>
+                                                    <td style="white-space: nowrap;">
+                                                        <?= $row_website_config->{'phone_'.$lang} ?>
+                                                    </td>
+                                                </tr>
+                                                <tr><td colspan="2" height="10px"></td></tr>
+                                                <tr style="font-size: 15px;">
+                                                    <td class="text-center"><i class="fa fa-envelope fa-fw"></i></td>
+                                                    <td style="white-space: nowrap;">
+                                                        <?= ' &nbsp;'.$lang_text['l_email'][$lang] ?>: <?= $row_website_config->{'email_address'} ?>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                 </div>
                             </div>
                             <div class="apus_custom_menu wpb_content_element _sct_footer_top">
-                                <div class="">
-                                    <div class="wpb_text_column wpb_content_element " >
-                                        <div class="wpb_wrapper">
-                                            <p style="text-align: left;">
-                                                <span class="" style="font-size: 15px;"> 
-                                                    <i class="fa fa-map-marker fa-fw"></i> 
-                                                    <?= $row_website_config->{'address_line_1_'.$lang} ?>
-                                                    <br> 
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $row_website_config->{'address_line_2_'.$lang} ?>
-                                                </span></p>
-                                            <p><span class="" style="font-size: 15px;"><i class="fa fa-phone fa-fw"></i>  <?= $row_website_config->{'phone_'.$lang} ?></span></p>
-                                            <p><span class="" style="font-size: 15px;"><i class="fa fa-envelope fa-fw"></i>  <?= $lang_text['l_email'][$lang] ?>: <?= $row_website_config->{'email_address'} ?></span></p>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                             <br><br>
                         </div>

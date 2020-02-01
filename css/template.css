@@ -11544,6 +11544,7 @@
   /* line 1840, ../sass/template/_elements.scss */
   .widget-information-box {
     padding: 22px;
+    padding-left: 8px; padding-right: 0px;
     background: #fff;
   }
   /* line 1843, ../sass/template/_elements.scss */
@@ -16539,8 +16540,9 @@
   .property-box-wrapper .property-box-price {
     font-size: 30px;
     line-height: 1.1;
-    letter-spacing: 0.4px;
-    font-family: 'Neuron-DemiBold';
+    letter-spacing: 2.5px;
+    font-family: Teko,'Neuron-DemiBold';
+    font-weight: bold;
   }
   /* line 768, ../sass/template/_property.scss */
   .property-box-wrapper .property-box-price .subfix {

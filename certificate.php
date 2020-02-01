@@ -1,4 +1,7 @@
-<?php include_once('layout/header.php') ?>
+<?php 
+	$APP_TITLE = "Certificate";
+	include_once('layout/header.php') 
+?>
 <div class="vc_row wpb_row vc_row-fluid">
 		<div class="wpb_column vc_column_container vc_col-sm-12">
 			<div class="vc_column-inner ">

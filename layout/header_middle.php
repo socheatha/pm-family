@@ -16,12 +16,10 @@
                 <div class="contact-info-widget" style="margin-left: -110px; ">
                     <table align="center">
                         <tr>
+                            <td valign="middle">
+                                <i class="fa fa-phone fa-fw icon_color fa-2x"></i>
+                            </td>
                             <td>
-                                <div class="pull-left">
-                                    <div class="icon">
-                                        <i class="fa fa-phone fa-fw icon_color fa-2x"></i>
-                                    </div>
-                                </div>
                                 <div class="pull-right">
                                     <div class="content">
                                         <?= $row_website_config->{'phone_'.$lang} ?>
@@ -32,11 +30,9 @@
                             </td>
                             <td width="20px"></td>
                             <td>
-                                <div class="pull-left">
-                                    <div class="icon">
-                                        <i class="fa fa-map-marker fa-fw icon_color fa-2x"></i>
-                                    </div>
-                                </div>
+                                <i class="fa fa-map-marker fa-fw icon_color fa-2x"></i>
+                            </td>
+                            <td>
                                 <div class="pull-right">
                                     <div class="content">
                                         <?= $row_website_config->{'address_line_1_'.$lang} ?>
