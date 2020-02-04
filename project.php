@@ -46,6 +46,38 @@
 															<img src="img/project/'.$row->profile.'" data-src="'.$row->profile.'" width="480" height="310" alt="'.$row_website_config->{'keywords'}. '" class="attachment-homesweet-standard-size unveil-image">
 														</div>
 													</a>
+													<div class="property-box-top clearfix">
+														<!-- share -->
+														<div class="property-box-share pull-left">
+															<a href="#share-box">
+																<i class="fa fa-share"></i>
+															</a>
+															<div class="property-box-share-content">
+																<div class="apus-social-share">
+																	<div class="bo-social-icons bo-sicolor social-radius-rounded">
+																		<a class="bo-social-facebook" href="" onclick="javascript: window.open(`http://www.facebook.com/sharer.php?u='.$base_url.'/project'.$row->id.'.html`); return false;" target="_blank" title="Share on facebook">
+																			<i class="fa fa-facebook"></i>
+																		</a>	
+																		<a class="bo-social-twitter" href="" onclick="javascript: window.open(`http://twitter.com/home?status='.$row->{'title_'.$lang}.' '.$base_url.'/project'.$row->id.'.html`); return false;" target="_blank" title="Share on Twitter">
+																			<i class="fa fa-twitter"></i>
+																		</a>
+															
+																			
+																		<a class="bo-social-linkedin" href="" onclick="javascript: window.open(`http://linkedin.com/shareArticle?mini=true&amp;url='.$base_url.'/project'.$row->id.'.html&amp;title='.$row->{'title_'.$lang}.'`); return false;" target="_blank" title="Share on LinkedIn">
+																			<i class="fa fa-linkedin"></i>
+																		</a>
+															
+																					
+																		<a class="bo-social-google" href="https://plus.google.com/share?url='.$base_url.'/project'.$row->id.'.html" onclick="javascript:window.open(this.href,
+																"", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;" target="_blank" title="Share on Google plus">
+																			<i class="fa fa-google-plus"></i>
+																		</a>
+																
+																	</div>
+																</div>	        
+															</div>
+														</div>
+													</div>
 													
 												</div><!-- /.property-image -->
 												<div class="property-box-content">
