@@ -10,7 +10,7 @@
 					<?php 
 						$i = 0;
 						$type = 2;
-						$year = @$_GET['year']!=""?$_GET['year']:'2019';
+						$year = @$_GET['year']!=""?$_GET['year']:date('Y');
 						$condition = " AND DATE_FORMAT(A.date, '%Y')=".$year;
 						$get_data = $connect->query("SELECT A.*,B.username as name
 							FROM tbl_news as A

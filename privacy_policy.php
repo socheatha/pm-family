@@ -6,7 +6,7 @@
 		<div class="wpb_text_column wpb_content_element ">
 			<div class="wpb_wrapper">
 				<?php 
-					$year = @$_GET['year']!=""?$_GET['year']:'2019';
+					$year = @$_GET['year']!=""?$_GET['year']:date('Y');
 					$condition = " AND DATE_FORMAT(A.date, '%Y')=".$year;
 					$get_data = $connect->query("SELECT A.*,B.username as name
 						FROM tbl_about_us as A

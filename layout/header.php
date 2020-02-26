@@ -19,13 +19,9 @@
         #rs-demo-id {}
     </style>
     <link rel='stylesheet' id='tlpportfolio-css-css' href='css/tlpportfolio.css' type='text/css' media='all' />
-    <!-- <link rel='stylesheet' id='wpml-menu-item-0-css'  href='//boreypenghuoth.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.css?ver=1' type='text/css' media='all' /> -->
     <link rel='stylesheet' id='homesweet-theme-fonts-css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Dosis:300,400,500,600,700,800&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_front-css' href='css/js_composer_front_custom.css' type='text/css' media='all' />
     <link rel='stylesheet' id='awesome-css' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
-    <!-- <link rel='stylesheet' id='font-ionicons-css'  href='https://boreypenghuoth.com/wp-content/themes/gfproperty/css/ionicons.css?ver=v2.0.0' type='text/css' media='all' /> -->
-    <!-- <link rel='stylesheet' id='apus-font-css'  href='https://boreypenghuoth.com/wp-content/themes/gfproperty/css/apus-font.css?ver=1.0.0' type='text/css' media='all' /> -->
-    <!-- <link rel='stylesheet' id='material-design-iconic-font-css'  href='https://boreypenghuoth.com/wp-content/themes/gfproperty/css/material-design-iconic-font.css?ver=2.2.0' type='text/css' media='all' /> -->
     <link rel='stylesheet' id='animate-css' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css' type='text/css' media='all' />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">

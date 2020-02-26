@@ -4,6 +4,35 @@ $id = @$_GET['id'];
 if (!$id) {
     header('location: project.php');
 }
+
+if (isset($_POST['btn_send_mail'])) 
+{
+    include_once('layout/header.php');
+    $to = $row_website_config->{'email_address'};
+    $v_post_url = $connect->real_escape_string(@$_POST['txt_post_url']); 
+    $v_subject = $connect->real_escape_string(@$_POST['txt_subject']); 
+    $v_name = $connect->real_escape_string(@$_POST['txt_name']); 
+    $v_email = $connect->real_escape_string(@$_POST['txt_email']); 
+    $v_phone = $connect->real_escape_string(@$_POST['txt_phone']); 
+    $v_message = $connect->real_escape_string(@$_POST['txt_message']); 
+
+    // start send mail
+    $subject = mb_encode_mimeheader($v_subject, 'UTF-8', 'B', "\r\n", strlen('Subject: '));
+    $v_message = "<p>-url: <a target='_blank' href='".$v_post_url."'>".$v_post_url."</a></p>
+                <p>-name: " .$v_name. "</p>
+                <p>-email: " .$v_email. "</p>
+                <p>-tel: " . $v_phone . "</p>
+                <p>-message: " . $v_message. "</p>";
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From: <'.$v_email.'>' . "\r\n";
+    if(mail($to,$subject,$v_message,$headers)){
+        echo '<script> window.alert("'.$lang_text['ct_email_sended'][$lang].'"); window.location.replace("'.$v_post_url.'"); </script>';
+    }else{
+        echo '<script> window.alert("Problem while sending please contact directly!") </script>';
+    }
+}
+
 $get_data = $connect->query("SELECT A.*,
         GROUP_CONCAT(B.image ORDER BY B.index ASC) as sliders,
         (SELECT GROUP_CONCAT(CONCAT(E.name_en,'_dev_socheatha_',E.name_kh,'_dev_socheatha_',E.profile) 
@@ -94,21 +123,22 @@ $prepare_meta_tags = '
 
             <aside id="enquire_widget-3" class="widget widget_enquire_widget">
                 <form method="post" class="contact-agent" action="">
-                    <input type="hidden" name="post_id" value="<?= $id ?>">
+                    <input type="hidden" name="txt_post_url" value="<?= $base_url.$_SERVER['REQUEST_URI'] ?>">
+                    <input type="hidden" name="txt_subject" value="<?= $row->{'title_' . $lang} ?>">
                     <div class="form-group">
-                        <input class="form-control" name="name" type="text" placeholder="<?= $lang_text['name'][$lang] ?>" value="" required="required">
+                        <input class="form-control" name="txt_name" required type="text" placeholder="<?= $lang_text['name'][$lang] ?>" value="" required="required">
                     </div><!-- /.form-group -->
                     <div class="form-group">
-                        <input class="form-control" name="email" type="email" placeholder="<?= $lang_text['l_email'][$lang] ?>" value="" required="required">
+                        <input class="form-control" name="txt_email" required type="email" placeholder="<?= $lang_text['l_email'][$lang] ?>" value="" required="required">
                     </div><!-- /.form-group -->
                     <div class="form-group">
-                        <input class="form-control" name="phone" type="text" placeholder="<?= $lang_text['phone'][$lang] ?>" value="" required="required">
+                        <input class="form-control" name="txt_phone" required type="text" placeholder="<?= $lang_text['phone'][$lang] ?>" value="" required="required">
                     </div><!-- /.form-group -->
                     <div class="form-group">
-                        <textarea class="form-control" name="message" required="required" placeholder="<?= $lang_text['p_comment'][$lang] ?>" rows="4"></textarea>
+                        <textarea class="form-control" name="txt_message" required required="required" placeholder="<?= $lang_text['p_comment'][$lang] ?>" rows="4"></textarea>
                     </div><!-- /.form-group -->
                     <div class="button-wrapper">
-                        <button type="submit" class="button btn btn-block btn-purple" name="enquire_form"><?= $lang_text['p_sent'][$lang] ?></button>
+                        <button type="submit" name="btn_send_mail" class="button btn btn-block btn-purple"><?= $lang_text['p_sent'][$lang] ?></button>
                     </div><!-- /.button-wrapper -->
                 </form>
             </aside>

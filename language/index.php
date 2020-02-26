@@ -231,4 +231,6 @@
 	$lang_text['ct_email'] = ['en'=>'Your Email ' ,				'kh'=> 	'អ៊ុីម៉ែល'	,'cn'=>''];
 	$lang_text['ct_subject'] = ['en'=>'Subject ' ,				'kh'=> 'ប្រធានបទ',				'cn'=>''];
 	$lang_text['ct_message'] = ['en'=>'Message ' ,				'kh'=> 'ខ្លឹមសារ',				'cn'=>''];
+	
+	$lang_text['ct_email_sended'] = ['en'=>'successfull, we will contact u soon. ' ,				'kh'=> 'សូមអរគុណសម្រាប់ការផ្ញើសារ យើងនឹងទាក់ទងអ្នកឆាប់ៗនេះ',				'cn'=>''];
  ?>
